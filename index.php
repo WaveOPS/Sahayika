@@ -25,11 +25,13 @@
 
  
   <link rel="stylesheet" href="assets/css/creativetim.min.css" type="text/css">
+  
   <style>
     #navbar-main {
       padding-top: 5px !important; /* Reduce top padding */
       padding-bottom: 5px !important; /* Reduce bottom padding */
       height: auto; /* Adjust height automatically */
+      background: #000;
     }
 
     #navbar-main .navbar-brand img {
@@ -66,7 +68,6 @@
       id="navbar-main"
       class="
         navbar navbar-main navbar-expand-lg
-        bg-dark
         navbar-light
         position-sticky
         top-0
@@ -94,7 +95,7 @@
         >
           <span class="navbar-toggler-icon text-white"></span>
         </button>
-        <div class="navbar-collapse collapse bg-dark" id="navbar_global">
+        <div class="navbar-collapse collapse" id="navbar_global">
           <div class="navbar-collapse-header">
             <div class="row">
               <div class="col-10 collapse-brand">
