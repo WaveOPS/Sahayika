@@ -202,18 +202,18 @@
                         </div>
                     </div>
                 </div>
-                <!-- Slide 3
+                <!-- Slide 3 -->
                 <div class="carousel-item">
                     <div class="jumbotron bg-cover text-white" 
-                         style="background-image: url('assets/img/farm-bg3.png'); height: 100vh; background-size: cover; background-position: center;">
+                         style="background-image: url('assets/img/farm-bg5.jpg'); height: 100vh; background-size: cover; background-position: center;">
                         <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                            <h1 class="display-3 font-weight-bold">Connecting Farmers and Customers</h1>
+                           
                             <p class="lead">Direct Selling Without Middlemen</p>
                             <a href="#contact" class="btn btn-warning btn-lg mt-3">Contact Us</a>
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <!-- Carousel Controls -->
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
