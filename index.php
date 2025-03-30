@@ -78,7 +78,7 @@
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
           <li class="nav-item dropdown">
             <a href="index.php" class="navbar-brand mr-lg-5 text-white">
-              <img src="assets/img/sahayika.png" />
+            <img src="assets/img/sahayika.png" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2);" />
             </a>
           </li>
         </ul>
@@ -98,8 +98,8 @@
           <div class="navbar-collapse-header">
             <div class="row">
               <div class="col-10 collapse-brand">
-                <a href="index.html">
-                  <img src="assets/img/nav.png" />
+                <a href="index.php">
+                  <img src="assets/img/sahayika.png" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2);" />
                 </a>
               </div>
               <div class="col-2 collapse-close bg-danger">
