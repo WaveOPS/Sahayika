@@ -66,7 +66,7 @@
       id="navbar-main"
       class="
         navbar navbar-main navbar-expand-lg
-        bg-default
+        bg-dark
         navbar-light
         position-sticky
         top-0
@@ -78,7 +78,7 @@
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
           <li class="nav-item dropdown">
             <a href="index.php" class="navbar-brand mr-lg-5 text-white">
-              <img src="assets/img/nav.png" />
+              <img src="assets/img/sahayika.png" />
             </a>
           </li>
         </ul>
@@ -94,7 +94,7 @@
         >
           <span class="navbar-toggler-icon text-white"></span>
         </button>
-        <div class="navbar-collapse collapse bg-default" id="navbar_global">
+        <div class="navbar-collapse collapse bg-dark" id="navbar_global">
           <div class="navbar-collapse-header">
             <div class="row">
               <div class="col-10 collapse-brand">
