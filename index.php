@@ -42,7 +42,21 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+  .carousel-item {
+    transition: opacity 1s ease-in-out;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for controls */
+    border-radius: 50%;
+  }
 </style>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
   <body class="bg-white" id="top" onload="myFunction()">
@@ -162,12 +176,53 @@
     </nav>
     <!-- End Navbar -->
 
-    <!-- Hero Section -->
-    <header class="jumbotron bg-cover text-white" style="background-image: url('assets/img/farm-bg.png'); height: 100vh; background-size: cover; background-position: center;">
-        <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-            <h1 class="display-3 font-weight-bold">Welcome to Agriculture Portal</h1>
-            <p class="lead">Empowering Farmers, Connecting Communities</p>
-            <a href="#services" class="btn btn-success btn-lg mt-3">Explore Features</a>
+    <!-- Hero Section with Sliding Background Images -->
+    <header>
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="jumbotron bg-cover text-white" 
+                         style="background-image: url('assets/img/farm-bg.png'); height: 100vh; background-size: cover; background-position: center;">
+                        <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                           
+                            <p class="lead">Empowering Farmers, Connecting Communities</p>
+                            <a href="#services" class="btn btn-success btn-lg mt-3">Explore Features</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="jumbotron bg-cover text-white" 
+                         style="background-image: url('assets/img/farm-bg2.jpg'); height: 100vh; background-size: cover; background-position: center;">
+                        <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                          
+                            <p class="lead">Bringing Technology to Your Fields</p>
+                            <a href="#features" class="btn btn-primary btn-lg mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3
+                <div class="carousel-item">
+                    <div class="jumbotron bg-cover text-white" 
+                         style="background-image: url('assets/img/farm-bg3.png'); height: 100vh; background-size: cover; background-position: center;">
+                        <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                            <h1 class="display-3 font-weight-bold">Connecting Farmers and Customers</h1>
+                            <p class="lead">Direct Selling Without Middlemen</p>
+                            <a href="#contact" class="btn btn-warning btn-lg mt-3">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </header>
 
