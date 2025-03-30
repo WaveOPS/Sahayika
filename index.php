@@ -25,10 +25,28 @@
 
  
   <link rel="stylesheet" href="assets/css/creativetim.min.css" type="text/css">
+  <style>
+    #navbar-main {
+      padding-top: 5px !important; /* Reduce top padding */
+      padding-bottom: 5px !important; /* Reduce bottom padding */
+      height: auto; /* Adjust height automatically */
+    }
 
+    #navbar-main .navbar-brand img {
+      max-height: 100px; /* Adjust logo size if necessary */
+    }
+  </style>
+  <style>
+  .bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
 </head>
 
   <body class="bg-white" id="top" onload="myFunction()">
+
     <!-- Navbar -->
     <nav
       id="navbar-main"
@@ -39,14 +57,14 @@
         position-sticky
         top-0
         shadow
-        py-0
+        py-2
       "
     >
       <div class="container">
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
           <li class="nav-item dropdown">
             <a href="index.php" class="navbar-brand mr-lg-5 text-white">
-                               <img src="assets/img/nav.png" />
+              <img src="assets/img/nav.png" />
             </a>
           </li>
         </ul>
@@ -88,54 +106,70 @@
           </div>
 
           <ul class="navbar-nav align-items-lg-center ml-auto">
-		  
-		   <li class="nav-item">
+            <li class="nav-item">
               <a href="contact.php" class="nav-link">
-                <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-address-card"></i> Contact</span
-                >
+                <span class="text-white nav-link-inner--text">
+                  <i class="text-white fas fa-address-card"></i> Contact
+                </span>
               </a>
             </li>
-			
-			
-			  <li class="nav-item">
-			   <div class="dropdown show ">
-		  <a class="nav-link dropdown-toggle text-white " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		                  <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-user-plus"></i> Sign Up</span
+            <li class="nav-item">
+              <div class="dropdown show">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
-		  </a>
-
-		  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			<a class="dropdown-item" href="farmer/fregister.php">Farmer</a>
-			<a class="dropdown-item" href="customer/cregister.php">Customer</a>
-		  </div>
-		</div>
-			</li>
-			
-		  
-				  <li class="nav-item">
-			   <div class="dropdown show ">
-		  <a class="nav-link dropdown-toggle text-white " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		                  <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-sign-in-alt"></i> Login</span
+                  <span class="text-white nav-link-inner--text">
+                    <i class="text-white fas fa-user-plus"></i> Sign Up
+                  </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="farmer/fregister.php">Farmer</a>
+                  <a class="dropdown-item" href="customer/cregister.php">Customer</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown show">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
-		  </a>
-
-		  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			<a class="dropdown-item" href="farmer/flogin.php">Farmer</a>
-			<a class="dropdown-item" href="customer/clogin.php">Customer</a>
-			<a class="dropdown-item" href="admin/alogin.php">Admin </a>
-		  </div>
-		</div>
-			</li>
-			
-          
+                  <span class="text-white nav-link-inner--text">
+                    <i class="text-white fas fa-sign-in-alt"></i> Login
+                  </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="farmer/flogin.php">Farmer</a>
+                  <a class="dropdown-item" href="customer/clogin.php">Customer</a>
+                  <a class="dropdown-item" href="admin/alogin.php">Admin</a>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- End Navbar -->
+
+    <!-- Hero Section -->
+    <header class="jumbotron bg-cover text-white" style="background-image: url('assets/img/farm-bg.png'); height: 100vh; background-size: cover; background-position: center;">
+        <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+            <h1 class="display-3 font-weight-bold">Welcome to Agriculture Portal</h1>
+            <p class="lead">Empowering Farmers, Connecting Communities</p>
+            <a href="#services" class="btn btn-success btn-lg mt-3">Explore Features</a>
+        </div>
+    </header>
 
 <div class="wrapper" >
 
