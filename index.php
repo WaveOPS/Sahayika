@@ -408,29 +408,29 @@
         </div>
 
         <!-- Additional Features -->
-        <div class="row mt-5">
-            <!-- Feature 4 -->
+        <div class="row">
+            <!-- Feature 4: Agriculture News -->
             <div class="col-md-6 mb-4">
-                <div class="media">
-                    <div class="icon icon-shape bg-danger text-white rounded-circle mr-4">
-                        <i class="fas fa-newspaper fa-2x"></i>
-                    </div>
-                    <div class="media-body">
-                        <h5 class="mt-0 font-weight-bold">Agriculture News</h5>
-                        <p class="text-muted">Stay updated with the latest news and trends in the agriculture industry.</p>
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <div class="icon icon-shape bg-danger text-white rounded-circle mb-4">
+                            <i class="fas fa-newspaper fa-2x"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Agriculture News</h5>
+                        <p class="card-text text-muted">Stay updated with the latest news and trends in the agriculture industry.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Feature 5 -->
+            <!-- Feature 5: Market Insights -->
             <div class="col-md-6 mb-4">
-                <div class="media">
-                    <div class="icon icon-shape bg-info text-white rounded-circle mr-4">
-                        <i class="fas fa-chart-line fa-2x"></i>
-                    </div>
-                    <div class="media-body">
-                        <h5 class="mt-0 font-weight-bold">Market Insights</h5>
-                        <p class="text-muted">Get real-time market insights to make informed decisions about your crops.</p>
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <div class="icon icon-shape bg-info text-white rounded-circle mb-4">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Market Insights</h5>
+                        <p class="card-text text-muted">Get real-time market insights to make informed decisions about your crops.</p>
                     </div>
                 </div>
             </div>
