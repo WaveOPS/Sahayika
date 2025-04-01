@@ -222,7 +222,7 @@
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
                         <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Welcome to SAHAYIKA</h1>
                         <p class="lead">Empowering Farmers, Connecting Communities</p>
-                        <a href="#services" class="btn btn-success btn-lg mt-3">Explore Features</a>
+                        <a href="#features" class="btn btn-success btn-lg mt-3">Explore Features</a>
                     </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                      style="background-image: url('assets/img/farm-bg2.jpg'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
                         <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Innovating Agriculture</h1>
-                        <a href="#features" class="btn btn-lg mt-3 btn-brown">Sign Up</a>
+                        <a href="#features" class="btn btn-success btn-lg mt-3">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -350,7 +350,7 @@
 
 <div class="section bg-white py-5" id="about">
     <div class="container text-center">
-        <h2 class="display-4 font-weight-bold" style="color: rgb(72, 40, 113);">About Us</h2>
+        <h2 class="display-4 font-weight-bold" style="color: rgb(34, 139, 34);">About Us</h2>
         <p class="lead text-muted">Sahayika is a platform dedicated to empowering farmers and connecting them directly with customers. We aim to revolutionize agriculture with technology and innovation.</p>
     </div>
 </div>
