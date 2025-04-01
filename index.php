@@ -438,6 +438,13 @@
     </div>
 </div>
 
+<div class="section bg-white py-5" id="about">
+    <div class="container text-center">
+        <h2 class="display-4 font-weight-bold" style="color: rgb(72, 40, 113);">About Us</h2>
+        <p class="lead text-muted">Sahayika is a platform dedicated to empowering farmers and connecting them directly with customers. We aim to revolutionize agriculture with technology and innovation.</p>
+    </div>
+</div>
+
 <script>
 
 const apiKey = "sk-xxxxxxxxxxxxxxxxxxx";   // Enter your apikey here
