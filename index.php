@@ -58,6 +58,35 @@
         color: white;
     }
 </style>
+<style>
+    .icon-shape {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .card-title {
+        color: rgb(72, 40, 113);
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease-in-out;
+    }
+</style>
+<style>
+    .btn-brown {
+        background-color: rgb(58, 28, 6) !important; /* Solid brown color */
+        color: white !important; /* White text */
+        border: none !important; /* Remove border */
+        box-shadow: none !important; /* Remove any shadow */
+    }
+    .btn-brown:hover {
+        background-color: rgb(65, 33, 10) !important; /* Darker brown on hover */
+        color: white !important; /* Ensure text remains white */
+    }
+</style>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <!-- Bootstrap JS -->
@@ -191,7 +220,7 @@
                 <div class="jumbotron bg-cover text-white" 
                      style="background-image: url('assets/img/farm-bg.png'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold" style="color:rgb(130, 100, 169);">Welcome to SAHAYIKA</h1>
+                        <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Welcome to SAHAYIKA</h1>
                         <p class="lead">Empowering Farmers, Connecting Communities</p>
                         <a href="#services" class="btn btn-success btn-lg mt-3">Explore Features</a>
                     </div>
@@ -202,9 +231,8 @@
                 <div class="jumbotron bg-cover text-white" 
                      style="background-image: url('assets/img/farm-bg2.jpg'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold" style="color:rgb(72, 40, 113);">Innovating Agriculture</h1>
-                        <p class="lead">Bringing Technology to Your Fields</p>
-                        <a href="#features" class="btn btn-primary btn-lg mt-3">Learn More</a>
+                        <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Innovating Agriculture</h1>
+                        <a href="#features" class="btn btn-lg mt-3 btn-brown">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -213,7 +241,7 @@
                 <div class="jumbotron bg-cover text-white" 
                      style="background-image: url('assets/img/farm-bg5.jpg'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold" style="color:rgb(130, 100, 169);">Connecting Farmers and Customers</h1>
+                        <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Connecting Farmers and Customers</h1>
                         <p class="lead">Direct Selling Without Middlemen</p>
                         <a href="#contact" class="btn btn-warning btn-lg mt-3">Contact Us</a>
                     </div>
@@ -271,7 +299,7 @@
 
 <!-- ======================================================================================================================================== -->
 
-    <div class="section features-6 text-dark bg-white" id="services">
+    <!-- <div class="section features-6 text-dark bg-white" id="services">
       <div class="container ">
 
         <div class="row">
@@ -322,174 +350,93 @@
    </div>
       </div>
     </div>
-
+ -->
 
      
 <!-- ======================================================================================================================================== -->
 
-      <div class="section features-2 text-dark bg-white" id="features"> 
-        <div class="container"> 
-          <div class="row align-items-center"> 
-            <div class="col-lg-5 col-md-8 mr-auto text-left"> 
-              <div class="pr-md-5"> 
-                <div class="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle mb-5"> <i class="ni ni-favourite-28"> </i></div>
-                <h3 class="display-3 text-justify">Features</h3>
-                <p>The time is now for the next step in farming. We bring you the future of farming along with great tools for asisting the farmers.</p>
-                <ul class="list-unstyled mt-5"> 
-                  <li class="py-2"> 
-                    <div class="d-flex align-items-center"> 
-                      <div>
-                        <div class="badge badge-circle badge-primary mr-3"> <i class="ni ni-settings-gear-65"> </i></div>
-                      </div>
-                      <div>
-                        <h6 class="mb-0">Highly Reliable and Accurate.</h6>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2"> 
-                    <div class="d-flex align-items-center"> 
-                      <div>
-                        <div class="badge badge-circle badge-primary mr-3"> <i class="ni ni-html5"> </i></div>
-                      </div>
-                      <div>
-                        <h6 class="mb-0">Faster & Responsive website.</h6>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2"> 
-                    <div class="d-flex align-items-center"> 
-                      <div>
-                        <div class="badge badge-circle badge-primary mr-3"> <i class="ni ni-settings-gear-65"> </i></div>
-                      </div>
-                      <div>
-                        <h6 class="mb-0">Real time weather forecast.</h6>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2"> 
-                    <div class="d-flex align-items-center"> 
-                      <div>
-                        <div class="badge badge-circle badge-primary mr-3"> <i class="ni ni-satisfied"> </i></div>
-                      </div>
-                      <div>
-                        <h6 class="mb-0">Integrated news feature.</h6>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+<div class="section features-6 text-dark bg-light py-5" id="features">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row text-center mb-5">
+            <div class="col-md-8 mx-auto">
+                <h2 class="display-4 font-weight-bold" style="color: rgb(72, 40, 113);">Our Features</h2>
+                <p class="lead text-muted">Empowering farmers and customers with cutting-edge tools and services.</p>
             </div>
-			
-
-		  
-            <div class="col-lg-7 col-md-12 pl-md-0"> 
- <img class="img-fluid ml-lg-5" src="assets/img/features.png" width="100%">
- </div>
-			
-			
-          </div>
         </div>
-        <span > </span>
-      </div>
-     
-	<!-- ======================================================================================================================================== -->
- 
-	 
 
- <!-- <div class="section features-6 text-dark bg-white" id="tech">
-        <div class="container-fluid shado">
-
-            <div class="row">
-                <div class="col-md-8 mx-auto text-center">
-                    <span class="badge badge-primary badge-pill mb-3">stack</span>
-                    <h3 class="display-3 ">Technologies Used</h3>
-                    <p class="" >Our Development Stack</p>
+        <!-- Features Cards -->
+        <div class="row">
+            <!-- Feature 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <div class="icon icon-shape bg-success text-white rounded-circle mb-4">
+                            <i class="fas fa-seedling fa-2x"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Crop Recommendations</h5>
+                        <p class="card-text text-muted">Get personalized crop and fertilizer recommendations based on soil and weather conditions.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="row text-lg-center align-self-center">
-
-                  <div class="col-md-4">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/html.png" alt="HTML5">                       
-                        <h6 class="info-title text-uppercase text-primary">HTML5</h6>
+            <!-- Feature 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <div class="icon icon-shape bg-primary text-white rounded-circle mb-4">
+                            <i class="fas fa-cloud-sun fa-2x"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Weather Forecast</h5>
+                        <p class="card-text text-muted">Plan your farming activities with accurate and real-time weather updates.</p>
                     </div>
                 </div>
-
-               <div class="col-md-4">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/css3.png" alt="CSS3">                       
-                        <h6 class="info-title text-uppercase text-primary">CSS3</h6>
-                    </div>
-                </div>
-
-               <div class="col-md-4">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/js.png" alt="JavaScript">                       
-                        <h6 class="info-title text-uppercase text-primary">JavaScript</h6>
-                    </div>
-                </div>
-
-
-
-</div> -->
-
-<!-- <div class="row text-center ">            
-
-                 <div class="col-md-4 d-none d-md-block">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/bootstrap.png" alt="BootStrap4">                       
-                        <h6 class="info-title text-uppercase text-primary">BootStrap4</h6>
-                    </div>
-                </div>
-
-                 <div class="col-md-4 d-none d-md-block">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/apache.png" alt="Apache">                       
-                        <h6 class="info-title text-uppercase text-primary">Apache</h6>
-                    </div>
-                </div>
-                
-                 <div class="col-md-4 d-none d-md-block">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/mysql.png" alt="MySQL">                       
-                        <h6 class="info-title text-uppercase text-primary">MySQL</h6>
-                    </div>
-                </div>
-
-                
-            </div>
-			
-			
-<div class="row text-center ">            
-
-                 <div class="col-md-4 d-none d-md-block">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/jquery.png" alt="BootStrap4">                       
-                        <h6 class="info-title text-uppercase text-primary">JQUERY</h6>
-                    </div>
-                </div>
-
-                 <div class="col-md-4 d-none d-md-block">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/openai2.png" alt="Apache">                       
-                        <h6 class="info-title text-uppercase text-primary">OPEN AI</h6>
-                    </div>
-                </div>
-                
-                 <div class="col-md-4 d-none d-md-block">
-                    <div class="info">
-                    <img class=" img-fluid" src="assets/img/php2.png" alt="MySQL">                       
-                        <h6 class="info-title text-uppercase text-primary">PHP</h6>
-                    </div>
-                </div>
-
-                
             </div>
 
-
+            <!-- Feature 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow border-0">
+                    <div class="card-body text-center">
+                        <div class="icon icon-shape bg-warning text-white rounded-circle mb-4">
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                        </div>
+                        <h5 class="card-title font-weight-bold">Direct Selling</h5>
+                        <p class="card-text text-muted">Sell your crops directly to customers without the involvement of middlemen.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div> -->
+
+        <!-- Additional Features -->
+        <div class="row mt-5">
+            <!-- Feature 4 -->
+            <div class="col-md-6 mb-4">
+                <div class="media">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle mr-4">
+                        <i class="fas fa-newspaper fa-2x"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mt-0 font-weight-bold">Agriculture News</h5>
+                        <p class="text-muted">Stay updated with the latest news and trends in the agriculture industry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-md-6 mb-4">
+                <div class="media">
+                    <div class="icon icon-shape bg-info text-white rounded-circle mr-4">
+                        <i class="fas fa-chart-line fa-2x"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="mt-0 font-weight-bold">Market Insights</h5>
+                        <p class="text-muted">Get real-time market insights to make informed decisions about your crops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
 
