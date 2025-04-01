@@ -368,8 +368,8 @@
         <!-- Features Cards -->
         <div class="row">
             <!-- Feature 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow border-0">
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card shadow border-0 h-100">
                     <div class="card-body text-center">
                         <div class="icon icon-shape bg-success text-white rounded-circle mb-4">
                             <i class="fas fa-seedling fa-2x"></i>
@@ -381,8 +381,8 @@
             </div>
 
             <!-- Feature 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow border-0">
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card shadow border-0 h-100">
                     <div class="card-body text-center">
                         <div class="icon icon-shape bg-primary text-white rounded-circle mb-4">
                             <i class="fas fa-cloud-sun fa-2x"></i>
@@ -394,8 +394,8 @@
             </div>
 
             <!-- Feature 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow border-0">
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card shadow border-0 h-100">
                     <div class="card-body text-center">
                         <div class="icon icon-shape bg-warning text-white rounded-circle mb-4">
                             <i class="fas fa-shopping-cart fa-2x"></i>
@@ -410,8 +410,8 @@
         <!-- Additional Features -->
         <div class="row">
             <!-- Feature 4: Agriculture News -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow border-0">
+            <div class="col-md-6 mb-4 d-flex">
+                <div class="card shadow border-0 h-100">
                     <div class="card-body text-center">
                         <div class="icon icon-shape bg-danger text-white rounded-circle mb-4">
                             <i class="fas fa-newspaper fa-2x"></i>
@@ -423,8 +423,8 @@
             </div>
 
             <!-- Feature 5: Market Insights -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow border-0">
+            <div class="col-md-6 mb-4 d-flex">
+                <div class="card shadow border-0 h-100">
                     <div class="card-body text-center">
                         <div class="icon icon-shape bg-info text-white rounded-circle mb-4">
                             <i class="fas fa-chart-line fa-2x"></i>
