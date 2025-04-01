@@ -47,6 +47,41 @@ function getdistrict(val) {
 }
 
 </script>	
+
+<style>
+    body {
+        background-image: url('../assets/img/farm-background.jpg');
+        background-size: cover;
+        background-position: center;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .container {
+        max-width: 600px;
+        margin-top: 50px;
+        background-color: rgba(255, 255, 255, 0); /* White with transparency */
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .form-control {
+        border-radius: 5px;
+    }
+    .btn-custom {
+        background-color: #ff9800;
+        color: white;
+        font-weight: bold;
+    }
+    .btn-custom:hover {
+        background-color: #e68900;
+    }
+    .password-toggle {
+        cursor: pointer;
+    }
+  </style>
 </head>
 
   <body class="bg-white" id="top" >
@@ -58,7 +93,8 @@ function getdistrict(val) {
         bg-default
         navbar-light
         position-sticky
-        top-0
+        top- -50
+        
         shadow
         py-0
       "
@@ -159,7 +195,7 @@ function getdistrict(val) {
     <!-- End Navbar -->
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+    <!-- <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -170,10 +206,10 @@ function getdistrict(val) {
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div> -->
 <!-- ======================================================================================================================================== -->
 
-<div class="container">
+<div class="container" >
 
  <div class="row">
           <div class="col-md-8 mx-auto text-center">
@@ -336,56 +372,10 @@ function getdistrict(val) {
   
 </section>
 
-	 <footer class="footer">
-        <div class="container">
-                    <div class="row">         
-                <div class="col-4 col-md-2   align-self-center">				
-                    <img class="align-text-center img-fluid"  src="../assets/img/footer-logo.png" />               
-                </div>				
-                <div class="offset-sm-2 col-5 ">
-                    <h5>Our Address</h5>
-                    <address>
-		              Vishwothama Nagar, Bantakal<br>
-		              Udupi - 574 115, Karnataka<br>		              
-		              <div class="btn-group text-center" role="group">
-                    <a role="button" class="btn btn-primary" href="tel:+919448936339"><i class="fa fa-phone"></i> Call</a>
-                    <a role="button" class="btn btn-info" href="tel:+918233294006"> <i class="fa fa-fax"></i> Fax</a>
-                    <a role="button" class="btn btn-success" href="mailto:info@sode-edu.in"> <i class="fa fa-envelope-o"></i> Email</a>
-                </div>
-		           </address>
-                </div>				
-                <div class="col-12 col-md-3 align-self-center">
-            <div class="social-network  text-center">
-				           
-       <button target="_blank" href="/" rel="nofollow" class="btn btn-icon-only btn-linkedin rounded-circle" data-toggle="tooltip" data-original-title="Mail Us">
-            <span class="btn-inner--icon"><i class="fas fa-envelope"></i></span>
-          </button>
-          <button target="_blank" href="/" rel="nofollow" class="btn btn-icon-only btn-twitter rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
-            <span class="btn-inner--icon"><i class="fab fa-twitter"></i></span>
-          </button>
-          <button target="_blank" href="/" rel="nofollow" class="btn-icon-only rounded-circle btn btn-facebook" data-toggle="tooltip" data-original-title="Like us">
-            <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
-          </button>
-          <button target="_blank" href="/" rel="nofollow" class="btn btn-icon-only btn-instagram rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
-            <span class="btn-inner--icon"><i class="fab fa-instagram "></i></span>
-          </button>
-          <button target="_blank" href="/" rel="nofollow" class="btn btn-icon-only btn-github rounded-circle" data-toggle="tooltip" data-original-title="Star on Github">
-            <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
-          </button>
-             
-           			
-				</div>				
-				</div>
-           </div>		    
-		   <hr>
-           <div class="row justify-content-center">             
-                     <div class="col-auto">					
-                    <p>&copy; Copyright 2023 AGRICULTURE PORTAL, All Rights Reserved </p>
-                </div>
-           </div>
-        </div>
-    </footer>
-
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 </body>
 
