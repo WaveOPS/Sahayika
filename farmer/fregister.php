@@ -158,7 +158,28 @@ function getdistrict(val) {
     <!-- End Navbar -->
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+  <style>
+    body {
+      background: url('../assets/img/farm-background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .login-button {
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+    .login-button:hover {
+      background: #45a049;
+    }
+  </style>
+    <!-- <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -169,7 +190,7 @@ function getdistrict(val) {
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div> -->
 <!-- ======================================================================================================================================== -->
 
 <div class="container">
@@ -356,7 +377,7 @@ function getdistrict(val) {
   
 </section>
 
- <footer class="footer">
+ <!-- <footer class="footer">
         <div class="container">
                     <div class="row">         
                 <div class="col-4 col-md-2   align-self-center">				
@@ -404,7 +425,7 @@ function getdistrict(val) {
                 </div>
            </div>
         </div>
-    </footer>
+    </footer> -->
 
 
 </body>

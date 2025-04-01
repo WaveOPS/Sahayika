@@ -32,6 +32,40 @@ include('cloginScript.php'); // Includes Login Script
  
   <link rel="stylesheet" href="../assets/css/creativetim.min.css" type="text/css">
 
+  <style>
+    body {
+      background: url('../assets/img/farm-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.88); /* Transparent box */
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(0px);
+    }
+    .form-control {
+      background: rgb(255, 255, 255);
+      border: none;
+      color: #ffffff;
+      border: 0.5px solid black;
+    }
+    .form-control::placeholder {
+      color: #eee;
+    }
+    .btn-login {
+      background-color: #28a745;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .btn-login:hover {
+      background-color: #218838;
+    }
+  </style>
+
 </head>
 
   <body class="bg-white" id="top">
@@ -140,11 +174,23 @@ include('cloginScript.php'); // Includes Login Script
           </ul>
         </div>
       </div>
+        <!-- jQuery, Popper.js, and Bootstrap JS (Required for dropdowns to work) -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-Uo9W4x+OGIBL8kBHPpCz7p+U2Jkz9lF61FaV6LU6RUGhd8Eh2Q1dj0C8t3U4Ehj"
+        crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmV+gtRoaXv3h1p7m3l4fiHzTtgE03OrME67D+ZnNw8HA3u8wE5DAZ+l1/m2tM"
+        crossorigin="anonymous"></script> -->
     </nav>
     <!-- End Navbar -->
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+    <!-- <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -155,122 +201,56 @@ include('cloginScript.php'); // Includes Login Script
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div> -->
 <!-- ======================================================================================================================================== -->
 
-<div class="container">
-
- <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-info badge-pill mb-3">Login</span>
-          </div>
-        </div> 
-      
-<div class="row">
-<div class="col-sm-12 mb-3">  
-			  
-  <div class="nav nav-tabs nav-fill bg-gradient-default" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active font-weight-bold text-warning" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Customer Login</a>
-
-  </div>
-                  
-                		  
-      <div class="tab-content py-3 px-3 px-sm-0 bg-gradient-inf" id="nav-tabContent">
-
- 
-         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-           <div class="card card-body bg-gradient-danger">
- 
- 
- 
- 
-                 <form method="POST" action="">     
-                        
-					<div class="form-group row">
-                    <label for="email" class="col-md-3 col-form-label"
-                      ><h6 class="text-white font-weight-bold">Email Id</h6>
-                    </label>
-                    <div class="col-md-9">
-                      <input
-                        type="text"
-                        class="form-control"
-                        required
-                        name="cust_email"
-                        placeholder="Enter Email ID"
-                      />
-                    </div>
-                  </div>
-				  
-				  			  		 <div class="form-group row">
-                <label for="pass" class="col-md-3 col-form-label text-white" > Password </label>
-			   <div class="col-9">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-              </div>
-              <input name="cust_password" type="password"  class="input form-control" id="password" placeholder="Password" required="true" aria-label="password" aria-describedby="basic-addon1" />
-              <div class="input-group-append">
-                <span class="input-group-text" onclick="password_show_hide();">
-                  <i class="fas fa-eye" id="show_eye"></i>
-                  <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
-                </span>
-              </div>
+<div class="container d-flex justify-content-center align-items-center" style="height: 50vh;">
+    <div class="col-md-6 login-container">
+      <h3 class="text-center text-green mb-3">Customer Login</h3>
+      <form method="POST" action="">
+        <div class="form-group">
+          <label class="text-black">Email Id</label>
+          <input type="text" class="form-control" required name="cust_email" placeholder="Enter Email ID" />
+        </div>
+        <div class="form-group">
+          <label class="text-black">Password</label>
+          <div class="input-group">
+            <input name="cust_password" type="password" class="form-control" id="password" placeholder="Password" required />
+            <div class="input-group-append">
+              <span class="input-group-text" onclick="password_show_hide();">
+                <i class="fas fa-eye" id="show_eye"></i>
+                <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+              </span>
             </div>
           </div>
-		   </div>
-				  
-				  
-		
-		 <div class="form-group row">
-                    <div class="offset-md-3 col-md-2">
-                      <button
-                        type="submit"
-                        class="btn btn-info text-dark"
-						name="customerlogin" id="submit" >
-                        Login
-                      </button>
-                    </div>
-					</div>
-					
-					   <span><?php echo $error; ?></span>
-					   
-					  
-	
-             </form>
- 
- 
- 
-				
-           </div>
-       </div> 
-	</div>
-                 </div>
-                </div>
-              </div> 
-			  
-  
-</section>
+        </div>
+        <button type="submit" class="btn-login btn btn-block" name="customerlogin">Login</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function password_show_hide() {
+      var x = document.getElementById("password");
+      var show_eye = document.getElementById("show_eye");
+      var hide_eye = document.getElementById("hide_eye");
+      hide_eye.classList.remove("d-none");
+      if (x.type === "password") {
+        x.type = "text";
+        show_eye.style.display = "none";
+        hide_eye.style.display = "block";
+      } else {
+        x.type = "password";
+        show_eye.style.display = "block";
+        hide_eye.style.display = "none";
+      }
+    }
+  </script>
 
-	    <?php require("footer.php");?>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
 
 </body>
-
-  <script>
-  function password_show_hide() {
-  var x = document.getElementById("password");
-  var show_eye = document.getElementById("show_eye");
-  var hide_eye = document.getElementById("hide_eye");
-  hide_eye.classList.remove("d-none");
-  if (x.type === "password") {
-    x.type = "text";
-    show_eye.style.display = "none";
-    hide_eye.style.display = "block";
-  } else {
-    x.type = "password";
-    show_eye.style.display = "block";
-    hide_eye.style.display = "none";
-  }
-}
-</script>
-
 </html>

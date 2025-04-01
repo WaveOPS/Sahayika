@@ -144,7 +144,7 @@ include('floginScript.php'); // Includes Login Script
     <!-- End Navbar -->
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+    <!-- <div class="back_image ">
       <span></span>
       <span></span>
       <span></span>
@@ -155,107 +155,81 @@ include('floginScript.php'); // Includes Login Script
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div> -->
 <!-- ======================================================================================================================================== -->
 
-<div class="container">
+<style>
+    body {
+      background: url('../assets/img/farm-background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .login-button {
+      background-color: #28a745;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    .login-button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <?php include('navbar.php'); ?> <!-- Ensure navbar remains on the page -->
 
- <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-info badge-pill mb-3">Login</span>
-          </div>
-        </div> 
-      
-<div class="row">
-<div class="col-sm-12 mb-3">  
-			  
-  <div class="nav nav-tabs nav-fill bg-gradient-default" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active font-weight-bold text-warning" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Farmer Login</a>
-
-  </div>
-                  
-                		  
-      <div class="tab-content py-3 px-3 px-sm-0 bg-gradient-inf" id="nav-tabContent">
-
- 
-         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-           <div class="card card-body bg-gradient-warning">
- 
- 
- 
- 
-                 <form method="POST" action="">     
-                        
-					<div class="form-group row">
-                    <label for="email" class="col-md-3 col-form-label"
-                      ><h6 class="text-white font-weight-bold">Email Id</h6>
-                    </label>
-                    <div class="col-md-9">
-                      <input
-                        type="text"
-                        class="form-control"
-                        required
-                        name="farmer_email"
-                        placeholder="Enter Email ID"
-                      />
-                    </div>
-                  </div>
-				  
-				  			  		 <div class="form-group row">
-                <label for="pass" class="col-md-3 col-form-label text-white" > Password </label>
-			   <div class="col-9">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-              </div>
-              <input name="farmer_password" type="password"  class="input form-control" id="password" placeholder="Password" required="true" aria-label="password" aria-describedby="basic-addon1" />
-              <div class="input-group-append">
-                <span class="input-group-text" onclick="password_show_hide();">
-                  <i class="fas fa-eye" id="show_eye"></i>
-                  <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
-                </span>
+  <section class="d-flex align-items-center justify-content-center" style="height: 50vh;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 login-container">
+          <h3 class="text-center text-success">Farmer Login</h3>
+          <form method="POST" action="">
+            <div class="form-group">
+              <label>Email Id</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="text" class="form-control" required name="farmer_email" placeholder="Enter Email ID"/>
               </div>
             </div>
-          </div>
-		   </div>
-				  
-				  
-		
-		 <div class="form-group row">
-                    <div class="offset-md-3 col-md-2">
-                      <button
-                        type="submit"
-                        class="btn btn-info text-dark"
-						name="farmerlogin" id="submit" >
-                        Login
-                      </button>
-                    </div>
-					</div>
-					
-					   <span><?php echo $error; ?></span>
-					   
-					  
-	
-             </form>
- 
- 
- 
-				
-           </div>
-       </div> 
-	</div>
-                 </div>
+            <div class="form-group">
+              <label>Password</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-lock"></i></span>
                 </div>
-              </div> 
-			  
-  
-</section>
+                <input name="farmer_password" type="password" class="form-control" id="password" placeholder="Password" required="true"/>
+                <div class="input-group-append">
+                  <span class="input-group-text" onclick="password_show_hide();">
+                    <i class="fas fa-eye" id="show_eye"></i>
+                    <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn login-button " name="farmerlogin">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	    <?php require("footer.php");?>
+	    <!-- <?php require("footer.php");?> -->
 
-</body>
-
-  <script>
+      <script>
   function password_show_hide() {
   var x = document.getElementById("password");
   var show_eye = document.getElementById("show_eye");
@@ -272,5 +246,16 @@ include('floginScript.php'); // Includes Login Script
   }
 }
 </script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+
 
 </html>
