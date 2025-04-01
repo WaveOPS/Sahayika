@@ -232,7 +232,7 @@
                      style="background-image: url('assets/img/farm-bg2.jpg'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
                         <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Innovating Agriculture</h1>
-                        <a href="#features" class="btn btn-success btn-lg mt-3">Sign Up</a>
+                        <a href="#about" class="btn btn-success btn-lg mt-3">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -243,7 +243,7 @@
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
                         <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Connecting Farmers and Customers</h1>
                         <p class="lead">Direct Selling Without Middlemen</p>
-                        <a href="#contact" class="btn btn-warning btn-lg mt-3">Contact</a>
+                        <a href="contact.php" class="btn btn-warning btn-lg mt-3">Contact</a>
                     </div>
                 </div>
             </div>
