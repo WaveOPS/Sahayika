@@ -191,7 +191,7 @@
                 <div class="jumbotron bg-cover text-white" 
                      style="background-image: url('assets/img/farm-bg.png'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold">Welcome to SAHAYIKA</h1>
+                        <h1 class="display-3 font-weight-bold" style="color:rgb(130, 100, 169);">Welcome to SAHAYIKA</h1>
                         <p class="lead">Empowering Farmers, Connecting Communities</p>
                         <a href="#services" class="btn btn-success btn-lg mt-3">Explore Features</a>
                     </div>
@@ -202,7 +202,7 @@
                 <div class="jumbotron bg-cover text-white" 
                      style="background-image: url('assets/img/farm-bg2.jpg'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold">Innovating Agriculture</h1>
+                        <h1 class="display-3 font-weight-bold" style="color:rgb(72, 40, 113);">Innovating Agriculture</h1>
                         <p class="lead">Bringing Technology to Your Fields</p>
                         <a href="#features" class="btn btn-primary btn-lg mt-3">Learn More</a>
                     </div>
@@ -213,7 +213,7 @@
                 <div class="jumbotron bg-cover text-white" 
                      style="background-image: url('assets/img/farm-bg5.jpg'); height: 100vh; background-size: cover; background-position: center;">
                     <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold">Connecting Farmers and Customers</h1>
+                        <h1 class="display-3 font-weight-bold" style="color:rgb(130, 100, 169);">Connecting Farmers and Customers</h1>
                         <p class="lead">Direct Selling Without Middlemen</p>
                         <a href="#contact" class="btn btn-warning btn-lg mt-3">Contact Us</a>
                     </div>
@@ -396,7 +396,7 @@
  
 	 
 
- <div class="section features-6 text-dark bg-white" id="tech">
+ <!-- <div class="section features-6 text-dark bg-white" id="tech">
         <div class="container-fluid shado">
 
             <div class="row">
@@ -432,9 +432,9 @@
 
 
 
-</div>
+</div> -->
 
-<div class="row text-center ">            
+<!-- <div class="row text-center ">            
 
                  <div class="col-md-4 d-none d-md-block">
                     <div class="info">
@@ -489,9 +489,7 @@
 
 
         </div>
-    </div>
-
-<?php require("footer.php");?>
+    </div> -->
 
 <script>
 
