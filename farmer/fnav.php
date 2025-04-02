@@ -14,7 +14,7 @@
      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
        <li class="nav-item">
          <a href="../index.php" class="navbar-brand text-white">
-           <img src="assets/img/sahayika.png" alt="Logo" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2); height: 40px;">
+           <img src="../assets/img/sahayika.png" alt="Logo" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2); height: 40px;">
          </a>
        </li>
      </ul>
@@ -33,10 +33,11 @@
 
      <div class="collapse navbar-collapse" id="navbar_global">
        <ul class="navbar-nav align-items-lg-center ml-auto">
-         <li class="nav-item"><a href="../index.php" class="nav-link text-white">Home</a></li>
+         <li class="nav-item">
+          <a href="../index.php" class="nav-link text-white">Home</a></li>
 
          <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle text-white" href="#" id="predictionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Prediction</a>
+           <a class="nav-link dropdown-toggle text-white" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" id="predictionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Prediction</a>
            <div class="dropdown-menu" aria-labelledby="predictionDropdown">
              <a class="dropdown-item" href="fcrop_prediction.php">Crop Prediction</a>
              <a class="dropdown-item" href="fyield_prediction.php">Yield Prediction</a>
@@ -82,6 +83,3 @@
    </div>
  </nav>
 
-<!-- Ensure Bootstrap JS and jQuery are included -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
