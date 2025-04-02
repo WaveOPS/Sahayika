@@ -72,9 +72,9 @@
                <i class="fas fa-sign-in-alt"></i> Login
              </a>
              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-               <a class="dropdown-item" href="farmer/flogin.php">Farmer</a>
+               <a class="dropdown-item" href="../farmer/flogin.php">Farmer</a>
                <a class="dropdown-item" href="../customer/clogin.php">Customer</a>
-               <a class="dropdown-item" href="../admin/alogin.php">Admin</a>
+               <a class="dropdown-item" href="admin/alogin.php">Admin</a>
              </div>
            </div>
          </li>

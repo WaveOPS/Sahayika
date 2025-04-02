@@ -83,3 +83,15 @@
    </div>
  </nav>
 
+<!-- Include required JavaScript libraries in the correct order -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+<!-- Ensure dropdowns are initialized -->
+<script>
+  $(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });
+</script>
+
