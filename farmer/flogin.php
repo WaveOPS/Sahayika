@@ -32,12 +32,43 @@ include('floginScript.php'); // Includes Login Script
  
   <link rel="stylesheet" href="../assets/css/creativetim.min.css" type="text/css">
 
+  <style>
+    html, body {
+      height: 100%; /* Ensure the body takes full height */
+      margin: 0; /* Remove any default margin */
+      padding: 0; /* Remove any default padding */
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: url('../assets/img/farm-background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .footer {
+      background: rgb(35, 35, 35); /* Semi-transparent black background */
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0; /* Ensure no margin around the footer */
+      border: none;
+      flex-shrink: 0; /* Prevent footer from shrinking */
+    }
+  </style>
 </head>
 
   <body class="bg-white" id="top">
+  <?php include('navbar.php'); ?> <!-- Navbar moved to the top -->
+  <main>
   <section class="section section-shaped section-lg">
     <!-- <div class="back_image ">
-      <span></span>
       <span></span>
       <span></span>
       <span></span>
@@ -51,11 +82,6 @@ include('floginScript.php'); // Includes Login Script
 <!-- ======================================================================================================================================== -->
 
 <style>
-    body {
-      background: url('../assets/img/farm-background.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
     .login-container {
       background: rgba(255, 255, 255, 0.9);
       padding: 30px;
@@ -78,7 +104,6 @@ include('floginScript.php'); // Includes Login Script
   </style>
 </head>
 <body>
-  <?php include('navbar.php'); ?> <!-- Ensure navbar remains on the page -->
 
   <section class="d-flex align-items-center justify-content-center" style="height: 50vh;">
     <div class="container">
@@ -118,8 +143,11 @@ include('floginScript.php'); // Includes Login Script
       </div>
     </div>
   </section>
+</main>
 
-	    <!-- <?php require("footer.php");?> -->
+  <footer class="footer">
+    <?php require("footer.php"); ?> <!-- Footer is now styled and positioned at the bottom -->
+  </footer>
 
       <script>
   function password_show_hide() {
