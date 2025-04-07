@@ -22,7 +22,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
  
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+   <!-- <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -33,24 +33,40 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div>-->
+	<head>
+		<style>
+			 body {
+      background: url('../assets/img/farm.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+	.login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+	  opacity: 0.95;
+    }
+			</style>
+	</head>
 <!-- ======================================================================================================================================== -->
 
 <div class="container ">
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-danger badge-pill mb-3">Prediction</span>
+            <span class="badge badge-success badge-pill mb-3">Prediction</span>
           </div>
         </div>
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
-				<div class="card text-white bg-gradient-success mb-3">
+				<div class="card text-white bg-gradient-white mb-3 login-container">
 				<form role="form" action="#" method="post" >  
 				  <div class="card-header">
-				  <span class=" text-info display-4" > Yield Prediction  </span>	
+				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;" > Yield Prediction  </span>	
 				  
 				  </div>
 
@@ -198,11 +214,12 @@ if (selectedDistrict && selectedSeason) {
 	</form>
 </div>
 
-<div class="card text-white bg-gradient-success mb-3">
-				  <div class="card-header">
-				  <span class=" text-success display-4" > Result  </span>					
-				  </div>
+<div class="card-header login-container">
+				  <span class="display-4" style="color:green;"> Result  </span>					
+				 
 
+<div class="card text-white mb-3 login-container" style="background-color: green;">
+				  
 					<h4>
 					<?php 
 					
@@ -216,7 +233,7 @@ if (selectedDistrict && selectedSeason) {
 					$area=trim($_POST['area']);
 
 
-					echo "Predicted crop yield (in Quintal) is: ";
+					echo'<span style="color:white;">Predicted crop yield (in Quintal) is:</span>';
 
 					$Jstate=json_encode($state);
 					$Jdistrict=json_encode($district);
@@ -226,14 +243,14 @@ if (selectedDistrict && selectedSeason) {
 
 					$command = escapeshellcmd("python ML/yield_prediction/yield_prediction.py $Jstate $Jdistrict $Jseason $Jcrops $Jarea ");
                     $output = passthru($command);
-					echo $output;	
+					echo '<span style="color:white;">'.$output.'</span>';	
 					
 					}
 
                     ?>
 					</h4>
             </div>
- 
+				</div>
 	
 	
             </div>
