@@ -65,9 +65,9 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 				<div class="card text-white bg-gradient-white mb-3 login-container">
 				<form role="form" action="#" method="post" >  
-				  <div class="card-header">
+				  <div class="card-header d-flex justify-content-between align-items-center">
 				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;" > Fertilizer Recommendation  </span>	
-						<span class="pull-right">
+						<span class="pull-left">
 							<button type="submit" value="Recommend" name="Fert_Recommend" class="btn btn-success btn-submit" style="background-color: green;">SUBMIT</button>
 						</span>		
 				  
@@ -208,7 +208,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 					$command = escapeshellcmd("python ML/fertilizer_recommendation/fertilizer_recommendation.py $Jsonn $Jsonp $Jsonk $Jsont $Jsonh $Jsonsm $Jsonsoil $Jsoncrop ");
                     $output = passthru($command);
-					echo '<span>'.$output.'</span>';					
+					echo '<span style="color:white">'.$output.'</span>';					
 					}
                     ?>
 					</h4>
