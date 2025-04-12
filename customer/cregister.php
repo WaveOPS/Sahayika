@@ -55,36 +55,11 @@ function getdistrict(val) {
         background-position: center;
         font-family: 'Open Sans', sans-serif;
     }
-    .container {
-        max-width: 600px;
-        margin-top: 50px;
-        background-color: rgba(255, 255, 255, 0); /* White with transparency */
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .card {
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .form-control {
-        border-radius: 5px;
-    }
-    .btn-custom {
-        background-color: #ff9800;
-        color: white;
-        font-weight: bold;
-    }
-    .btn-custom:hover {
-        background-color: #e68900;
-    }
-    .password-toggle {
-        cursor: pointer;
-    }
+    
   </style>
 </head>
 
-  <body class="bg-white" id="top" >
+  <body class="bg-black" id="top" >
     <!-- Navbar -->
     <nav
       id="navbar-main"
@@ -102,14 +77,14 @@ function getdistrict(val) {
       <div class="container">
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
           <li class="nav-item dropdown">
-            <a href="../index.php" class="navbar-brand mr-lg-5 text-white">
+            <a href="../index.php" class="navbar-brand mr-lg-5 text-black">
                                <img src="../assets/img/nav.png" />
             </a>
           </li>
         </ul>
 
         <button
-          class="navbar-toggler bg-white"
+          class="navbar-toggler bg-black"
           type="button"
           data-toggle="collapse"
           data-target="#navbar_global"
@@ -117,7 +92,7 @@ function getdistrict(val) {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon text-white"></span>
+          <span class="navbar-toggler-icon text-black"></span>
         </button>
         <div class="navbar-collapse collapse bg-default" id="navbar_global">
           <div class="navbar-collapse-header">
@@ -173,8 +148,8 @@ function getdistrict(val) {
 		  	  <li class="nav-item">
 			   <div class="dropdown show ">
 		  <a class="nav-link dropdown-toggle text-white " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		                  <span class="text-white nav-link-inner--text"
-                  ><i class="text-white fas fa-sign-in-alt"></i> Login</span
+		                  <span class="text-black nav-link-inner--text"
+                  ><i class="text-black fas fa-sign-in-alt"></i> Login</span
                 >
 		  </a>
 
@@ -213,7 +188,7 @@ function getdistrict(val) {
 
  <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-info badge-pill mb-3">Register</span>
+            <span class="badge badge-success badge-pill mb-3">Register</span>
           </div>
         </div> 
       
@@ -221,7 +196,7 @@ function getdistrict(val) {
 <div class="col-sm-12 mb-3">  
 			  
   <div class="nav nav-tabs nav-fill bg-gradient-default" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active font-weight-bold text-warning" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">User Singup</a>
+    <a class="nav-item nav-link active font-weight-bold text-success" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">User Singup</a>
 
   </div>
                   
@@ -230,7 +205,7 @@ function getdistrict(val) {
 
  
          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-           <div class="card card-body bg-gradient-warning">
+           <div class="card card-body" style="background-color: rgba(255, 255, 255, 0.8);">
  
 
 
@@ -244,14 +219,14 @@ function getdistrict(val) {
  </script>
 
 			   <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" > Customer Name <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" > Customer Name <strong class="text-default"> *</strong></label>
                 <div class="col-md-9">
                   <input class="form-control" type="text" name="name"  required="true"/>
                 </div>				
               </div>
 			  
 			  <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" > Email Address <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" > Email Address <strong class="text-default"> *</strong></label>
                 <div class="col-md-9">
                   <input class="form-control" type="email" name="email" required="true" />
 				    
@@ -260,7 +235,7 @@ function getdistrict(val) {
               </div>
 			  
 			  <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" > Mobile No <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" > Mobile No <strong class="text-default"> *</strong></label>
                 <div class="col-md-9">
                   <input class="form-control" type="number" name="mobile" pattern="[6789][0-9]{9}" required="true" />
                 </div>
@@ -269,7 +244,7 @@ function getdistrict(val) {
 			  
 			  
 			  <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" required="true"> State <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" required="true"> State <strong class="text-default"> *</strong></label>
                 <div class="col-md-9">
                  <select onChange="getdistrict(this.value);"  name="state" id="state" class="form-control" >
                     <option value="">Select State</option>
@@ -286,7 +261,7 @@ function getdistrict(val) {
               </div>
 			  
 			  <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" required="true"> City <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" required="true"> City <strong class="text-default"> *</strong></label>
                 <div class="col-md-9">
 	<select  name="city" id="district-list" class="form-control">
 <option value="">Select City</option>
@@ -295,21 +270,21 @@ function getdistrict(val) {
               </div>
 			  
 			  			  <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" > Address <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" > Address <strong class="text-default"> *</strong></label>
                 <div class="col-md-9">
                   <input class="form-control" type="text" name="address" required="true" />
                 </div>
               </div>
 			  
 			  	  <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" > Pincode <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" > Pincode <strong class="text-default"> *</strong></label>
                 <div class="col-md-9">
                   <input class="form-control" type="number" min="0" min="6" name="pincode" required="true" />
                 </div>
               </div>
 			  
 			  		 <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" > Password <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" > Password <strong class="text-default"> *</strong></label>
 			   <div class="col-9">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
@@ -322,13 +297,13 @@ function getdistrict(val) {
                   <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
                 </span>
               </div>
-			  			  <span class="text-white d-block"> Use minimum 8 Characters with atleast 1 numericals, Capital letter and Special Character.  </span>
+			  			  <span class="text-red d-block"> Use minimum 8 Characters with atleast 1 numericals, Capital letter and Special Character.  </span>
             </div>		
           </div>
 		   </div>
 	
 			  		 <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" >Confirm Password <strong class="text-default"> *</strong></label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" >Confirm Password <strong class="text-default"> *</strong></label>
 			   <div class="col-9">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
@@ -349,7 +324,7 @@ function getdistrict(val) {
 		   
 			  
 			   <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white" >  </label>
+                <label for="staffid" class="col-md-3 col-form-label text-black" >  </label>
                 <div class="col-md-9">
             <button name="customerregister" class=" btn-block btn btn-success">
 			<span class="glyphicon glyphicon-edit"></span> Submit</button>		
