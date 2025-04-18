@@ -54,7 +54,7 @@
              </a>
              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                <a class="dropdown-item" href="../farmer/fregister.php">Farmer</a>
-               <a class="dropdown-item" href="cregister.php">Customer</a>
+               <a class="dropdown-item" href="../customer/cregister.php">Customer</a>
              </div>
            </div>
          </li>
@@ -73,7 +73,7 @@
              </a>
              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                <a class="dropdown-item" href="../farmer/flogin.php">Farmer</a>
-               <a class="dropdown-item" href="clogin.php">Customer</a>
+               <a class="dropdown-item" href="../clogin.php">Customer</a>
                <a class="dropdown-item" href="../admin/alogin.php">Admin</a>
              </div>
            </div>
