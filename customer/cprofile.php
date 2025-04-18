@@ -50,7 +50,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 <?php include ('cnav.php');  ?>
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+  <!--  <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -61,14 +61,30 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div>-->
+    <head>
+		<style>
+			 body {
+      background: url('../assets/img/farm-bg3.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+	.login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+	  opacity: 0.95;
+    }
+			</style>
+	</head>
 <!-- ======================================================================================================================================== -->
 
 <div class="container ">
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-danger badge-pill mb-3">Profile</span>
+            <span class="badge badge-pill mb-3" style="background-color: green;color:white;">Profile</span>
           </div>
         </div>
 		
@@ -76,9 +92,9 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
             <div class="col-md-4 mb-3">
 			
 			
-				<div class="card">
-                <div class="card-body bg-gradient-warning">
-                  <div class="d-flex flex-column align-items-center text-center">
+				<div class="card" style="border-radius: 20px;">
+                <div class="card-body bg-gradient-warning login-container">
+                  <div class="d-flex flex-column align-items-center text-center ">
                     <img src="../assets/img/customers.png" alt="student" class="rounded-circle img-fluid" width="202px">
                     <div class="mt-3">
                       <h4>                Welcome     <?php echo $login_session ?></h4>
@@ -93,8 +109,8 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 			
 			
                 <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body bg-gradient-success">
+              <div class="card mb-3 " style="border-radius: 20px;">
+                <div class="card-body bg-gradient-success login-container">
 				
                   <div class="row mb-1">
                     <div class="col-sm-3">
