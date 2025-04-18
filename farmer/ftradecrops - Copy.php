@@ -22,7 +22,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 <?php include ('fnav.php');  ?>
  	
   <section class="section section-shaped section-lg">
-   <!-- <div class="shape shape-style-1 shape-primary">
+    <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -33,39 +33,23 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
       <span></span>
       <span></span>
       <span></span>
-    </div>-->
-	<head>
-		<style>
-			 body {
-      background: url('../assets/img/farm-bg4.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-	.login-container {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
-	  opacity: 0.95;
-    }
-			</style>
-	</head>
+    </div>
 <!-- ======================================================================================================================================== -->
 
 <div class="container ">
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-pill mb-3" style="background-color:#A52A2A;color:white;" >Trade</span>
+            <span class="badge badge-danger badge-pill mb-3">Trade</span>
           </div>
         </div>
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
-				<div class="card text-white bg-gradient-white mb-3 login-container">
+				<div class="card text-white bg-gradient-success mb-3">
 				  <div class="card-header">
-				  <span class="display-4" style="color:brown;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;"> Update Crop Stock  </span>					
+				  <span class=" text-success display-4" > Update Crop Stock  </span>					
 				  </div>
 
 				  <div class="card-body text-dark">
@@ -141,7 +125,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 						
                         <td>
                         <center>
-                        <button type="submit" name="Crop_submit" value="Crop_submit" class="btn btn-dark" style="background-color:brown ;">Submit</button>
+                        <button type="submit" name="Crop_submit" value="Crop_submit" class="btn btn-success">Submit</button>
                         </center>
                         </td>
                     </tr>

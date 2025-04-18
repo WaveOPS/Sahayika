@@ -66,7 +66,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 				<div class="card text-white bg-gradient-white mb-3 login-container">
 				<form role="form" action="#" method="post" >  
 				  <div class="card-header">
-				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;" > Yield Prediction  </span>	
+				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Yield Prediction  </span>	
 				  
 				  </div>
 
@@ -200,7 +200,7 @@ if (selectedDistrict && selectedSeason) {
 									<td>
                                     <center>
 										<div class="form-group ">
-											<button type="submit" value="Yield" name="Yield_Predict" class="btn btn-success btn-submit">Predict</button>
+											<button type="submit" value="Yield" name="Yield_Predict" class="btn btn-success btn-submit" style="background-color: green;">Predict</button>
 										</div>
                                     
                                     </center>

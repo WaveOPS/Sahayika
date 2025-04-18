@@ -80,8 +80,9 @@ $forecast = $data->list;
   
 <?php include ('fnav.php');  ?>
 
- <section class="section section-shaped section-lg">
-   <div class="shape shape-style-1 shape-primary">
+ 	
+  <section class="section section-shaped section-lg">
+    <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -103,7 +104,7 @@ $forecast = $data->list;
         </div>
 		
                     <div class="row row-content">
-            <div class="col-md-12 mb-3 login-container">
+            <div class="col-md-12 mb-3">
     <div class="row">
         <div class="col-md-12">
 				<div class="card text-white bg-gradient-secondary mb-3">

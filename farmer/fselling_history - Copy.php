@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $sql);
 <?php include ('fnav.php');  ?>
  	
   <section class="section section-shaped section-lg">
-  <!--<div class="shape shape-style-1 shape-primary">
+    <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -39,39 +39,23 @@ $result = mysqli_query($conn, $sql);
       <span></span>
       <span></span>
       <span></span>
-    </div>-->
-    <head>
-		<style>
-			 body {
-      background: url('../assets/img/farm-bg3.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-	.login-container {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
-	  opacity: 0.95;
-    }
-			</style>
-	</head>
+    </div>
 <!-- ======================================================================================================================================== -->
 
 <div class="container ">
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-success badge-pill mb-3">Trade</span>
+            <span class="badge badge-danger badge-pill mb-3">Trade</span>
           </div>
         </div>
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
-				<div class="card text-white bg-gradient-white mb-3 login-container">
+				<div class="card text-white bg-gradient-warning mb-3">
 				  <div class="card-header">
-				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Selling History  </span>					
+				  <span class=" text-warning display-4" > Selling History​  </span>					
 				  </div>
 
 				  <div class="card-body text-dark">

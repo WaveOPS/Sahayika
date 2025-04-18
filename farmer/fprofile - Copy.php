@@ -50,7 +50,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 <?php include ('fnav.php'); ?>
 
 <section class="section section-shaped section-lg">
-<!--<div class="shape shape-style-1 shape-primary">
+  <div class="shape shape-style-1 shape-primary">
     <span></span>
     <span></span>
     <span></span>
@@ -59,36 +59,20 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
     <span></span>
     <span></span>
     <span></span>
-  </div>-->
-  <head>
-		<style>
-			 body {
-      background: url('../assets/img/farm-bg8.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-	.login-container {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.9);
-	  opacity: 0.95;
-    }
-			</style>
-	</head>
+  </div>
 
   <!-- Profile Content -->
   <div class="container">
     <div class="row">
       <div class="col-md-8 mx-auto text-center">
-        <span class="badge badge-success badge-pill mb-3">Profile</span>
+        <span class="badge badge-danger badge-pill mb-3">Profile</span>
       </div>
     </div>
 
     <div class="row row-content">
       <div class="col-md-4 mb-3">
-        <div class="card" style="border-radius:20px;">
-          <div class="card-body bg-gradient-warning login-container">
+        <div class="card">
+          <div class="card-body bg-gradient-warning">
             <div class="d-flex flex-column align-items-center text-center">
               <img src="../assets/img/agri.png" alt="agri" class=" rounded-circle img-fluid" width="212px">
               <div class="mt-3">
@@ -101,8 +85,8 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
       </div>
 
       <div class="col-md-8">
-        <div class="card mb-3" style="border-radius: 20px;">
-          <div class="card-body bg-gradient-success login-container">
+        <div class="card mb-3">
+          <div class="card-body bg-gradient-success">
             <div class="row mb-1">
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">Farmer ID</h6>

@@ -37,7 +37,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 	<head>
 		<style>
 			 body {
-      background: url('../assets/img/farm.jpg');
+      background: url('../assets/img/farm-bg9.jpg');
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -66,7 +66,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 				<div class="card text-white bg-gradient-white mb-3 login-container">
 				<form role="form" action="#" method="post" >  
 				  <div class="card-header d-flex justify-content-between align-items-center">
-				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;" > Crop Recommendation  </span>	
+				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Crop Recommendation  </span>	
 						<span class="pull-right">
 							<button type="submit" value="Recommend" name="Crop_Recommend" class="btn btn-success btn-submit" style="background-color: green;">SUBMIT</button>
 						</span>		

@@ -65,7 +65,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 <?php include ('fnav.php');  ?>
  	
   <section class="section section-shaped section-lg">
-  <!--<div class="shape shape-style-1 shape-primary">
+    <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -76,23 +76,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
       <span></span>
       <span></span>
       <span></span>
-    </div>-->
-    <head>
-		<style>
-			 body {
-      background: url('../assets/img/farm-bg6.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-	.login-container {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.9);
-	  opacity: 0.95;
-    }
-			</style>
-	</head>
+    </div>
 <!-- ======================================================================================================================================== -->
 
 
@@ -100,11 +84,11 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
         <div class="row">
             <div class="col-md-12 ">
 			
-				<div class="card text-white bg-gradient-white mt--6 login-container">
+				<div class="card text-white bg-gradient-white mt--6">
 				
-				<div class="card-header bg-gradient-secondary d-flex ">
+				<div class="card-header bg-gradient-secondary d-flex">
 
-					<span class="text-default display-4 ">
+					<span class="text-default display-4">
 						<img src="../assets/img/chatgpt.svg" class="rounded-circle img-fluid" width="" alt="Chat GPT Logo"> Chat GPT
 					</span>
 
@@ -124,7 +108,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
                                     </div>
 
                                     <div class="col-md-2">
-                                        <input id="sendButton" type="button" value="SUBMIT" class=" form-control btn btn-success btn-block" style="background-color: green;"/>
+                                        <input id="sendButton" type="button" value="SUBMIT" class=" form-control btn btn-success btn-block" />
                                     </div>
                                 </div>
                             </div>
