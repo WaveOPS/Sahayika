@@ -32,11 +32,37 @@ include('aloginScript.php'); // Includes Login Script
   <link rel="stylesheet" href="../assets/css/creativetim.min.css" type="text/css">
 
   <style>
+     html, body {
+      height: 100%; /* Ensure the body takes full height */
+      margin: 0; /* Remove any default margin */
+      padding: 0; /* Remove any default padding */
+    }
+
     body {
-      background: url('../assets/img/farm-background.jpg') no-repeat center center fixed;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: url('../assets/img/farm-background.jpg');
       background-size: cover;
+      background-repeat: no-repeat;
       font-family: 'Open Sans', sans-serif;
     }
+
+    main {
+      flex: 1;
+    }
+
+    .footer {
+      background: rgb(35, 35, 35); /* Semi-transparent black background */
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0; /* Ensure no margin around the footer */
+      border: none;
+      flex-shrink: 0; /* Prevent footer from shrinking */
+    }
+
+    
     .login-container {
       background: rgba(255, 255, 255, 0.85);
       padding: 30px;
@@ -70,7 +96,7 @@ include('aloginScript.php'); // Includes Login Script
 
   <body class="bg-white" id="top">
   <?php include('navbar.php'); ?>
- 	
+ 	<main>
   <section class="section section-shaped section-lg">
     <!-- <div class="shape shape-style-1 shape-primary">
       <span></span>
@@ -118,7 +144,11 @@ include('aloginScript.php'); // Includes Login Script
       </form>
     </div>
   </div>
+  </section>
+  </main>
+  <footer class="footer">
   <?php require("footer.php");?>
+  </footer>
 
   <script>
     function password_show_hide() {
