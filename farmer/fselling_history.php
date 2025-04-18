@@ -43,7 +43,7 @@ $result = mysqli_query($conn, $sql);
     <head>
 		<style>
 			 body {
-      background: url('../assets/img/farm-bg3.jpg');
+      background: url('../assets/img/farm-bg4.jpg');
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -62,7 +62,7 @@ $result = mysqli_query($conn, $sql);
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-success badge-pill mb-3">Trade</span>
+            <span class="badge badge-pill mb-3"  style="background-color:#A52A2A;color:white;">Trade</span>
           </div>
         </div>
 		
@@ -71,7 +71,7 @@ $result = mysqli_query($conn, $sql);
 
 				<div class="card text-white bg-gradient-white mb-3 login-container">
 				  <div class="card-header">
-				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Selling History  </span>					
+				  <span class="display-4" style="color:brown;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Selling History  </span>					
 				  </div>
 
 				  <div class="card-body text-dark">

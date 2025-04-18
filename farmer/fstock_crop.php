@@ -59,7 +59,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-pill mb-3" style="background-color:#A52A2A;color:white;";>Crops</span>
+            <span class="badge badge-pill mb-3" style="background-color:#A52A2A;color:white;">Crops</span>
           </div>
         </div>
 		
