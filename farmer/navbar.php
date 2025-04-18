@@ -14,7 +14,7 @@
    <div class="container">
      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
        <li class="nav-item">
-         <a href="index.php" class="navbar-brand text-white">
+         <a href="../index.php" class="navbar-brand text-white">
            <img src="../assets/img/sahayika.png" alt="Logo" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2); height: 40px;">
          </a>
        </li>
@@ -35,7 +35,7 @@
      <div class="collapse navbar-collapse" id="navbar_global">
        <ul class="navbar-nav align-items-lg-center ml-auto">
          <li class="nav-item">
-           <a href="contact.php" class="nav-link text-white">
+           <a href="../contact.php" class="nav-link text-white">
              <i class="fas fa-address-card"></i> Contact
            </a>
          </li>
@@ -53,8 +53,8 @@
                <i class="fas fa-user-plus"></i> Sign Up
              </a>
              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-               <a class="dropdown-item" href="farmer/fregister.php">Farmer</a>
-               <a class="dropdown-item" href="customer/cregister.php">Customer</a>
+               <a class="dropdown-item" href="fregister.php">Farmer</a>
+               <a class="dropdown-item" href="../customer/cregister.php">Customer</a>
              </div>
            </div>
          </li>
@@ -72,7 +72,7 @@
                <i class="fas fa-sign-in-alt"></i> Login
              </a>
              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-               <a class="dropdown-item" href="farmer/flogin.php">Farmer</a>
+               <a class="dropdown-item" href="flogin.php">Farmer</a>
                <a class="dropdown-item" href="../customer/clogin.php">Customer</a>
                <a class="dropdown-item" href="../admin/alogin.php">Admin</a>
              </div>
