@@ -75,6 +75,22 @@ function getdistrict(val) {
       <span></span>
       <span></span>
     </div> -->
+    <head>
+		<style>
+			 body {
+      background: url('../assets/img/farm-background2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+	.login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+	  opacity: 0.95;
+    }
+			</style>
+	</head>
 <!-- ======================================================================================================================================== -->
 
 <div class="container" >
@@ -88,8 +104,8 @@ function getdistrict(val) {
 <div class="row">
 <div class="col-sm-12 mb-3">  
 			  
-  <div class="nav nav-tabs nav-fill bg-gradient-default" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active font-weight-bold text-success" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">User Singup</a>
+  <div class="nav nav-fill bg-gradient-white" id="nav-tab" role="tablist" style="border-radius: 20px;">
+    <a class="nav-item nav-link active font-weight-bold login-container" style="background-color: rgba(255, 255, 255, 0.92);color:green;font-size:25px;text-decoration:underline;font-family:'Times New Roman', Times, serif;" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">User Singup</a>
 
   </div>
                   
@@ -98,7 +114,7 @@ function getdistrict(val) {
 
  
          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-           <div class="card card-body" style="background-color: rgba(255, 255, 255, 0.8);">
+           <div class="card card-body login-container" style="background-color: rgba(255, 255, 255, 0.92);">
  
 
 
@@ -219,7 +235,7 @@ function getdistrict(val) {
 			   <div class="form-group row">
                 <label for="staffid" class="col-md-3 col-form-label text-black" >  </label>
                 <div class="col-md-9">
-            <button name="customerregister" class=" btn-block btn btn-success">
+            <button name="customerregister" class=" btn-block btn" style="background-color: green;color:white;">
 			<span class="glyphicon glyphicon-edit"></span> Submit</button>		
                 </div>		
               </div>

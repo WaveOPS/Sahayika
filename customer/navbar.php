@@ -14,7 +14,7 @@
    <div class="container">
      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
        <li class="nav-item">
-         <a href="index.php" class="navbar-brand text-white">
+         <a href="../index.php" class="navbar-brand text-white">
            <img src="../assets/img/sahayika.png" alt="Logo" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2); height: 40px;">
          </a>
        </li>
