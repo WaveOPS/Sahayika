@@ -3,3 +3,7 @@ numpy
 matplotlib
 joblib
 scikit-learn
+Pillow 
+torch
+torchvision
+torchsummary
