@@ -52,7 +52,8 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: #fff;
+      background-color: green; /* Set dropdown background to green */
+      color: white; /* Set text color to white */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       list-style: none;
       padding: 10px 0;
@@ -62,18 +63,24 @@
     }
 
     .custom-navbar .dropdown-menu a {
-      color: #000;
+      color: white; /* Set dropdown link text color to white */
       padding: 5px 15px;
       display: block;
       text-decoration: none;
     }
 
     .custom-navbar .dropdown-menu a:hover {
-      background-color: #f8f9fa;
+      background-color: #004d00; /* Darker green on hover */
+      color: white; /* Keep text white on hover */
     }
 
     .custom-navbar .nav-links .dropdown:hover .dropdown-menu {
       display: block;
+    }
+
+    /* Remove the dropdown indicator (caret) */
+    .custom-navbar .dropdown > a::after {
+      content: none; /* Removes the default dropdown indicator */
     }
   </style>
 </head>
