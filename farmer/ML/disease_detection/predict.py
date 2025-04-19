@@ -4,6 +4,7 @@ import torch.nn.functional as F
 import sys
 from torchvision import transforms
 from PIL import Image
+from disease import disease_dic
 
 def ConvBlock(in_channels, out_channels, pool=False):
     layers = [nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1),
@@ -60,9 +61,10 @@ image_path = sys.argv[1]
 
 # Image transform: match the training pipeline
 transform = transforms.Compose([
-    transforms.Resize((256, 256)),  # Slight safety resize
-    transforms.ToTensor()           # Matches notebook
+    transforms.Resize((256, 256)),  # 📏 now large enough to avoid crash
+    transforms.ToTensor()
 ])
+
 
 # Load and preprocess image
 image = Image.open(image_path).convert('RGB')
@@ -77,4 +79,6 @@ model.eval()
 with torch.no_grad():
     outputs = model(image)
     _, predicted = torch.max(outputs, 1)
-    print("Predicted disease:", class_names[predicted.item()])
+    class_name = class_names[predicted.item()]
+    info = disease_dic.get(class_name, "No additional info available.")
+    print(f"{class_name}|{info}")  # Use | as a delimiter for PHP

@@ -20,9 +20,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $pythonScriptPath = 'ML/disease_detection/predict.py';
                 $command = escapeshellcmd("python $pythonScriptPath $uploadFilePath");
                 $output = shell_exec($command);
-                
-                // Display the predicted disease
-                echo htmlspecialchars($output);
+
+                if ($output) {
+                    $output = trim($output);
+                    $parts = explode("|", $output);
+                    
+                    if (count($parts) === 2) {
+                        $className = htmlspecialchars($parts[0]);
+                        $description = htmlspecialchars($parts[1]);
+
+                        echo "<h2>Disease Detected: $className</h2>";
+                        echo "<p><strong>Info:</strong> $description</p>";
+                    } else {
+                        echo "<p>Unexpected output format: $output</p>";
+                    }
+                } else {
+                    echo "<p>Something went wrong with prediction.</p>";
+                }
+
             } else {
                 echo "Error in uploading the file.";
             }
