@@ -73,9 +73,6 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
     </div>-->
     <head>
 		<style>
@@ -98,42 +95,43 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 ">
-			
-				<div class="card text-white bg-gradient-white mt--6 login-container">
-				
-				<div class="card-header bg-gradient-secondary d-flex ">
+            <div class="col-md-12">
+                <div class="card text-white bg-gradient-white mt--6 login-container">
+                    <div class="card-header" style="background-color: #008000; color: white; display: flex; align-items: center;"> <!-- Green header -->
+                        <span class="text-default display-4">
+                            <img src="../assets/img/logo.png" class="img-fluid" width="50" alt="Logo"> <!-- Replaced with logo.png -->
+                            Sahayika Chat
+                        </span>
 
-					<span class="text-default display-4 ">
-						<img src="../assets/img/chatgpt.svg" class="rounded-circle img-fluid" width="" alt="Chat GPT Logo"> Chat GPT
-					</span>
+                        <div class="ml-auto">
+                        <button class="btn mr-2" onclick="clearContent()" style="background-color: white; color: #008000; border: 2px solid #008000;">
+    Clear Chat
+</button>                        </div>
+                    </div>
 
-					<div class="ml-auto">
-						<button class="btn btn-info" onclick="window.print()">Print</button>
-						<button class="btn btn-danger mr-2 " onclick="clearContent()">Clear Chat</button>					
-					</div>								
-				</div>
+                    <div class="card-body chat-box rounded p1" id="chatbox">
+                        <span id="copy-popup" class="popup">Copied!</span>
+                    </div>
 
-				 <div class="card-body chat-box rounded p1" id="chatbox"><span id="copy-popup" class="popup">Copied!</span></div>
-				 							
-							 <div class="card-footer bg-gradient-secondary">
-                                <div class="form-group row">
-                                    <div class="col-md-10 mb-1">
-                                        <input id="userInput" type="text" class="form-control text-dark"
-                                            placeholder="Type your message here..." />
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <input id="sendButton" type="button" value="SUBMIT" class=" form-control btn btn-success btn-block" style="background-color: green;"/>
-                                    </div>
-                                </div>
+                    <div class="card-footer" style="background-color: #008000;"> <!-- Green footer -->
+                        <div class="form-group row">
+                            <div class="col-md-10 mb-1">
+                                <input id="userInput" type="text" class="form-control text-dark"
+                                    placeholder="Type your message here..." />
                             </div>
-							
-	 </div>
 
+                            <div class="col-md-2">
+                                <!-- Replaced Submit button with a white send icon -->
+                                <button id="sendButton" class="form-control btn btn-success btn-block" style="background-color: #008000; color: white; border: none;">
+                                    <i class="fas fa-paper-plane"></i> <!-- Font Awesome Send Icon -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-       </div>
-	</div>
 		
 </section>
 
