@@ -54,12 +54,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 <div class="container-fluid ">
     
-    	 <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-success badge-pill mb-3">Recommendation</span>
-          </div>
-        </div>
-		
+    	
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
@@ -177,42 +172,39 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 
 <div class="card-header login-container">
-				  <span class=" display-4" style="color: green;"> Result  </span>					
-				 
-<div class="card text-white mb-3 login-container" style="background-color: green;">
-				  
+  <span class="display-4" style="color: green;"> Result </span>					
+  
+  <div class="card text-white mb-3 login-container" style="background-color: green; margin-top: 10px;">
+    <h4>
+      <?php 
+      if (isset($_POST['Fert_Recommend'])) {
+        $n = trim($_POST['n']);
+        $p = trim($_POST['p']);
+        $k = trim($_POST['k']);
+        $t = trim($_POST['t']);
+        $h = trim($_POST['h']);
+        $sm = trim($_POST['soilMoisture']);
+        $soil = trim($_POST['soil']);
+        $crop = trim($_POST['crop']);
 
-					<h4>
-					<?php 
-					if(isset($_POST['Fert_Recommend'])){
-					$n=trim($_POST['n']);
-					$p=trim($_POST['p']);
-					$k=trim($_POST['k']);
-					$t=trim($_POST['t']);
-					$h=trim($_POST['h']);
-					$sm=trim($_POST['soilMoisture']);
-					$soil=trim($_POST['soil']);
-					$crop=trim($_POST['crop']);
+        echo '<span style="color:white;">Recommended Fertilizer is: </span>';
 
+        $Jsonn = json_encode($n);
+        $Jsonp = json_encode($p);
+        $Jsonk = json_encode($k);
+        $Jsont = json_encode($t);
+        $Jsonh = json_encode($h);
+        $Jsonsm = json_encode($sm);
+        $Jsonsoil = json_encode($soil);
+        $Jsoncrop = json_encode($crop);
 
-					echo '<span style="color:white;">Recommended Fertilizer is :</span>';
-
-					$Jsonn=json_encode($n);
-					$Jsonp=json_encode($p);
-					$Jsonk=json_encode($k);
-					$Jsont=json_encode($t);
-					$Jsonh=json_encode($h);
-					$Jsonsm=json_encode($sm);
-					$Jsonsoil=json_encode($soil);
-					$Jsoncrop=json_encode($crop);
-
-					$command = escapeshellcmd("python ML/fertilizer_recommendation/fertilizer_recommendation.py $Jsonn $Jsonp $Jsonk $Jsont $Jsonh $Jsonsm $Jsonsoil $Jsoncrop ");
-                    $output = passthru($command);
-					echo '<span style="color:white">'.$output.'</span>';					
-					}
-                    ?>
-					</h4>
-            </div>
+        $command = escapeshellcmd("python ML/fertilizer_recommendation/fertilizer_recommendation.py $Jsonn $Jsonp $Jsonk $Jsont $Jsonh $Jsonsm $Jsonsoil $Jsoncrop");
+        $output = shell_exec($command); // Use shell_exec for better control
+        echo '<span style="color:white;">' . htmlspecialchars($output) . '</span>';
+      }
+      ?>
+    </h4>
+  </div>
 </div>
 	
 	

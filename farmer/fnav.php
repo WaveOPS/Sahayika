@@ -92,14 +92,7 @@
   </div>
   <ul class="nav-links">
     <li><a href="../index.php">Home</a></li>
-    <li class="dropdown">
-      <a href="#">Prediction</a>
-      <ul class="dropdown-menu">
-        <li><a href="fcrop_prediction.php">Crop Prediction</a></li>
-        <li><a href="fyield_prediction.php">Yield Prediction</a></li>
-        <li><a href="frainfall_prediction.php">Rainfall Prediction</a></li>
-      </ul>
-    </li>
+
     <li class="dropdown">
       <a href="#">Recommendation</a>
       <ul class="dropdown-menu">
@@ -108,6 +101,16 @@
         <li><a href="fdisease_detection.php">Disease Detection</a></li>
       </ul>
     </li>
+
+    <li class="dropdown">
+      <a href="#">Prediction</a>
+      <ul class="dropdown-menu">
+        <li><a href="fcrop_prediction.php">Crop Prediction</a></li>
+        <li><a href="fyield_prediction.php">Yield Prediction</a></li>
+        <li><a href="frainfall_prediction.php">Rainfall Prediction</a></li>
+      </ul>
+    </li>
+
     <li class="dropdown">
       <a href="#">Trade</a>
       <ul class="dropdown-menu">
@@ -124,7 +127,7 @@
         <li><a href="fnewsfeed.php">News Feed</a></li>
       </ul>
     </li>
-    <li><a href="fprofile.php">Profile (<?php echo $para2; ?>)</a></li>
+    <li><a href="fprofile.php">Profile </a></li>
     <li><a href="flogout.php">Logout</a></li>
   </ul>
 </nav>
