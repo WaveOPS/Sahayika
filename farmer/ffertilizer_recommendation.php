@@ -88,42 +88,42 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
                                  <tr class="text-center">
                                     <td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'n' placeholder="Nitrogen Eg:37" required class="form-control">
+											<input type = 'number' name = 'n' placeholder="Nitrogen Eg:37" required class="form-control" value="<?php echo isset($_POST['n']) ? htmlspecialchars($_POST['n']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'p' placeholder="Phosphorus Eg:0" required class="form-control">
+											<input type = 'number' name = 'p' placeholder="Phosphorus Eg:0" required class="form-control" value="<?php echo isset($_POST['p']) ? htmlspecialchars($_POST['p']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'k' placeholder="Pottasium Eg:0" required class="form-control">
+											<input type = 'number' name = 'k' placeholder="Pottasium Eg:0" required class="form-control" value="<?php echo isset($_POST['k']) ? htmlspecialchars($_POST['k']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 't'  placeholder="Temperature Eg:26" required class="form-control">
+											<input type = 'number' name = 't'  placeholder="Temperature Eg:26" required class="form-control" value="<?php echo isset($_POST['t']) ? htmlspecialchars($_POST['t']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'h'  placeholder="Humidity Eg:52" required class="form-control">
+											<input type = 'number' name = 'h'  placeholder="Humidity Eg:52" required class="form-control" value="<?php echo isset($_POST['h']) ? htmlspecialchars($_POST['h']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name='soilMoisture' placeholder="Soil Moisture Eg:38" required class="form-control">
+											<input type = 'number' name='soilMoisture' placeholder="Soil Moisture Eg:38" required class="form-control" value="<?php echo isset($_POST['soilMoisture']) ? htmlspecialchars($_POST['soilMoisture']) : ''; ?>">
 											
 										</div>
                                     </td>
@@ -132,11 +132,11 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 										<div class="form-group ">
 													<select name="soil" class="form-control">
 													<option  value="">Select Soil Type</option>
-													<option  value="Sandy">Sandy</option>
-													<option  value="Loamy">Loamy</option>
-													<option  value="Black">Black</option>
-													<option  value="Red">Red</option>
-													<option  value="Clayey">Clayey</option>											
+													<option value="Sandy" <?php echo (isset($_POST['soil']) && $_POST['soil'] == 'Sandy') ? 'selected' : ''; ?>>Sandy</option>
+													<option value="Loamy" <?php echo (isset($_POST['soil']) && $_POST['soil'] == 'Loamy') ? 'selected' : ''; ?>>Loamy</option>
+													<option value="Black" <?php echo (isset($_POST['soil']) && $_POST['soil'] == 'Black') ? 'selected' : ''; ?>>Black</option>
+													<option value="Red" <?php echo (isset($_POST['soil']) && $_POST['soil'] == 'Red') ? 'selected' : ''; ?>>Red</option>
+													<option value="Clayey" <?php echo (isset($_POST['soil']) && $_POST['soil'] == 'Clayey') ? 'selected' : ''; ?>>Clayey</option>											
 													</select>
 										</div>
 									</td>
@@ -145,17 +145,17 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 										<div class="form-group ">
 									<select name="crop" class="form-control">
 													<option  value="">Select Crop</option>
-													<option  value="Maize">Maize</option>
-													<option  value="Sugarcane">Sugarcane</option>
-													<option  value="Cotton">Cotton</option>
-													<option  value="Tobacco">Tobacco</option>
-													<option  value="Paddy">Paddy</option>	
-													<option  value="Barley">Barley</option>	
-													<option  value="Wheat">Wheat</option>	
-													<option  value="Millets">Millets</option>	
-													<option  value="Oil seeds">Oil seeds</option>	
-													<option  value="Pulses">Pulses</option>	
-													<option  value="Ground Nuts">Ground Nuts</option>													
+													<option value="Maize" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Maize') ? 'selected' : ''; ?>>Maize</option>
+													<option value="Sugarcane" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Sugarcane') ? 'selected' : ''; ?>>Sugarcane</option>
+													<option value="Cotton" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Cotton') ? 'selected' : ''; ?>>Cotton</option>
+													<option value="Tobacco" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Tobacco') ? 'selected' : ''; ?>>Tobacco</option>
+													<option value="Paddy" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Paddy') ? 'selected' : ''; ?>>Paddy</option>	
+													<option value="Barley" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Barley') ? 'selected' : ''; ?>>Barley</option>	
+													<option value="Wheat" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Wheat') ? 'selected' : ''; ?>>Wheat</option>	
+													<option value="Millets" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Millets') ? 'selected' : ''; ?>>Millets</option>	
+													<option value="Oil seeds" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Oil seeds') ? 'selected' : ''; ?>>Oil seeds</option>	
+													<option value="Pulses" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Pulses') ? 'selected' : ''; ?>>Pulses</option>	
+													<option value="Ground Nuts" <?php echo (isset($_POST['crop']) && $_POST['crop'] == 'Ground Nuts') ? 'selected' : ''; ?>>Ground Nuts</option>													
 													</select>
 										</div>
 

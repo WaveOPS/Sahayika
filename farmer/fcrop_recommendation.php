@@ -89,49 +89,49 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
                                  <tr class="text-center">
                                     <td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'n' placeholder="Nitrogen Eg:90" required class="form-control">
+											<input type = 'number' name = 'n' placeholder="Nitrogen Eg:90" required class="form-control" value="<?php echo isset($_POST['n']) ? htmlspecialchars($_POST['n']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'p' placeholder="Phosphorus Eg:42" required class="form-control">
+											<input type = 'number' name = 'p' placeholder="Phosphorus Eg:42" required class="form-control" value="<?php echo isset($_POST['p']) ? htmlspecialchars($_POST['p']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'k' placeholder="Pottasium Eg:43" required class="form-control">
+											<input type = 'number' name = 'k' placeholder="Pottasium Eg:43" required class="form-control" value="<?php echo isset($_POST['k']) ? htmlspecialchars($_POST['k']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 't' step =0.01 placeholder="Temperature Eg:21" required class="form-control">
+											<input type = 'number' name = 't' step =0.01 placeholder="Temperature Eg:21" required class="form-control" value="<?php echo isset($_POST['t']) ? htmlspecialchars($_POST['t']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'h' step =0.01 placeholder="Humidity Eg:82" required class="form-control">
+											<input type = 'number' name = 'h' step =0.01 placeholder="Humidity Eg:82" required class="form-control" value="<?php echo isset($_POST['h']) ? htmlspecialchars($_POST['h']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											<input type = 'number' name = 'ph' step =0.01 placeholder="PH Eg:6.5" required class="form-control">
+											<input type = 'number' name = 'ph' step =0.01 placeholder="PH Eg:6.5" required class="form-control" value="<?php echo isset($_POST['ph']) ? htmlspecialchars($_POST['ph']) : ''; ?>">
 											
 										</div>
                                     </td>
 									
 									<td>
                                     	<div class="form-group">
-											 <input type = 'number' name = 'r' step =0.01 placeholder="Rainfall Eg:203" required class="form-control">
+											 <input type = 'number' name = 'r' step =0.01 placeholder="Rainfall Eg:203" required class="form-control" value="<?php echo isset($_POST['r']) ? htmlspecialchars($_POST['r']) : ''; ?>">
 											
 										</div>
                                     </td>
@@ -152,13 +152,13 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
     <h4>
       <?php 
       if (isset($_POST['Crop_Recommend'])) {
-        $n = trim($_POST['n']);
-        $p = trim($_POST['p']);
-        $k = trim($_POST['k']);
-        $t = trim($_POST['t']);
-        $h = trim($_POST['h']);
-        $ph = trim($_POST['ph']);
-        $r = trim($_POST['r']);
+        $n = isset($_POST['n']) ? trim($_POST['n']) : null;
+        $p = isset($_POST['p']) ? trim($_POST['p']) : null;
+        $k = isset($_POST['k']) ? trim($_POST['k']) : null;
+        $t = isset($_POST['t']) ? trim($_POST['t']) : null;
+        $h = isset($_POST['h']) ? trim($_POST['h']) : null;
+        $ph = isset($_POST['ph']) ? trim($_POST['ph']) : null;
+        $r = isset($_POST['r']) ? trim($_POST['r']) : null;
 
         echo '<span style="color:white;">Recommended Crop is: </span>';
 
