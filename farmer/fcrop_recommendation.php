@@ -53,12 +53,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 <!-- ======================================================================================================================================== -->
 
 <div class="container-fluid ">
-    
-    	 <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-success badge-pill mb-3">Recommendation</span>
-          </div>
-        </div>
+
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
@@ -151,41 +146,38 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 
 <div class="card-header login-container">
-				  <span class="display-4" style="color:green;" > Result  </span>					
-				  
-<div class="card text-white mb-3 login-container" style="background-color: green;">
-				  
+  <span class="display-4" style="color:green;"> Result </span>					
+  
+  <div class="card text-white mb-3 login-container" style="background-color: green; margin-top: 10px;">
+    <h4>
+      <?php 
+      if (isset($_POST['Crop_Recommend'])) {
+        $n = trim($_POST['n']);
+        $p = trim($_POST['p']);
+        $k = trim($_POST['k']);
+        $t = trim($_POST['t']);
+        $h = trim($_POST['h']);
+        $ph = trim($_POST['ph']);
+        $r = trim($_POST['r']);
 
-					<h4>
-					<?php 
-					if(isset($_POST['Crop_Recommend'])){
-					$n=trim($_POST['n']);
-					$p=trim($_POST['p']);
-					$k=trim($_POST['k']);
-					$t=trim($_POST['t']);
-					$h=trim($_POST['h']);
-					$ph=trim($_POST['ph']);
-					$r=trim($_POST['r']);
+        echo '<span style="color:white;">Recommended Crop is: </span>';
 
+        $Jsonn = json_encode($n);
+        $Jsonp = json_encode($p);
+        $Jsonk = json_encode($k);
+        $Jsont = json_encode($t);
+        $Jsonh = json_encode($h);
+        $Jsonph = json_encode($ph);
+        $Jsonr = json_encode($r);
 
-					echo '<span style="color:white;">Recommended Crop is : </span>';
-
-					$Jsonn=json_encode($n);
-					$Jsonp=json_encode($p);
-					$Jsonk=json_encode($k);
-					$Jsont=json_encode($t);
-					$Jsonh=json_encode($h);
-					$Jsonph=json_encode($ph);
-					$Jsonr=json_encode($r);
-					
-					$command = escapeshellcmd("python ML/crop_recommendation/recommend.py $Jsonn $Jsonp $Jsonk $Jsont $Jsonh $Jsonph $Jsonr ");
-                    $output = passthru($command);
-					echo '<span style="color:white;">'.$output.'</span>';					
-					}
-                    ?>
-					</h4>
-            </div>
-				</div>
+        $command = escapeshellcmd("python ML/crop_recommendation/recommend.py $Jsonn $Jsonp $Jsonk $Jsont $Jsonh $Jsonph $Jsonr");
+        $output = shell_exec($command); // Use shell_exec for better control
+        echo '<span style="color:white;">' . htmlspecialchars($output) . '</span>';
+      }
+      ?>
+    </h4>
+  </div>
+</div>
 	
 	
             </div>
