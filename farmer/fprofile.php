@@ -79,35 +79,32 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
   <!-- Profile Content -->
   <div class="container">
-    <div class="row">
-      <div class="col-md-8 mx-auto text-center">
-        <span class="badge badge-success badge-pill mb-3">Profile</span>
-      </div>
-    </div>
 
     <div class="row row-content">
+      <!-- Profile Image and Edit Button -->
       <div class="col-md-4 mb-3">
         <div class="card" style="border-radius:20px;">
-          <div class="card-body bg-gradient-warning login-container">
+          <div class="card-body bg-white login-container">
             <div class="d-flex flex-column align-items-center text-center">
-              <img src="../assets/img/agri.png" alt="agri" class=" rounded-circle img-fluid" width="212px">
+              <img src="../assets/img/agri.png" alt="agri" class="rounded-circle img-fluid" width="212px">
               <div class="mt-3">
                 <h4>Welcome <?php echo $login_session ?></h4>
-                <button data-toggle="modal" data-target="#edit" class="btn btn-danger">Edit Profile</button>
+                <button data-toggle="modal" data-target="#edit" class="btn" style="background-color: #008000; color: white;">Edit Profile</button> <!-- Green button -->
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Profile Information -->
       <div class="col-md-8">
-        <div class="card mb-3" style="border-radius: 20px;">
-          <div class="card-body bg-gradient-success login-container">
+        <div class="card mb-3" style="border-radius: 20px;"> <!-- Added border-radius -->
+          <div class="card-body" style="background-color: #008000; color: white; border-radius: 20px;"> <!-- Added border-radius -->
             <div class="row mb-1">
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">Farmer ID</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para1 ?>
               </div>
             </div>
@@ -116,7 +113,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">Farmer Name</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para2 ?>
               </div>
             </div>
@@ -125,7 +122,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">Email Address</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para5 ?>
               </div>
             </div>
@@ -134,7 +131,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">Mobile No</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para6 ?>
               </div>
             </div>
@@ -143,7 +140,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">Gender</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para7 ?>
               </div>
             </div>
@@ -152,7 +149,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">DOB</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para8 ?>
               </div>
             </div>
@@ -161,7 +158,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">State</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para9 ?>
               </div>
             </div>
@@ -170,7 +167,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">District</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para10 ?>
               </div>
             </div>
@@ -179,7 +176,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">City</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 <?php echo $para11 ?>
               </div>
             </div>
@@ -188,7 +185,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               <div class="col-sm-3">
                 <h6 class="mb-0 font-weight-bold">Password</h6>
               </div>
-              <div class="col-sm-9 text-dark">
+              <div class="col-sm-9">
                 ********
               </div>
             </div>
@@ -196,6 +193,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Edit Profile Modal -->
     <div id="edit" class="modal fade" role="dialog">

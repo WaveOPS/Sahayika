@@ -1,21 +1,14 @@
 <?php
-require_once("../sql.php");
+include('db_connection.php'); // Include your database connection file
 
-if(!empty($_POST["state_id"])) 
-{
-$query =mysqli_query($conn,"SELECT * FROM district WHERE StCode = '" . $_POST["state_id"] . "'");
-?>
-<option value="">Select District</option>
-<?php
-while($row=mysqli_fetch_array($query))  
-{
-?>
-<option value="<?php echo $row["DistrictName"]; ?>"><?php echo $row["DistrictName"]; ?></option>
-<?php
+if (isset($_POST['state_id'])) {
+    $state_id = $_POST['state_id']; // Get the state code from the AJAX request
+    $query = mysqli_query($conn, "SELECT * FROM district WHERE state_code = '$state_id'");
+    echo '<option value="">Select District</option>'; // Default option
+    while ($row = mysqli_fetch_array($query)) {
+        echo '<option value="' . $row['DistrictName'] . '">' . $row['DistrictName'] . '</option>';
+    }
 }
-}
-
-
 ?>
 
 

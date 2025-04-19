@@ -240,26 +240,26 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">State</label>
+                <label for="state" class="col-md-3 col-form-label text-white">State</label>
                 <div class="col-md-9">
                   <select onChange="getdistrict(this.value);" name="state" id="state" class="form-control">
-                    <option value=""><?php echo "$para9"?></option>
-                    <?php $query =mysqli_query($conn,"SELECT * FROM state");
-                    while($row=mysqli_fetch_array($query))
-                    { ?>
-                    <option value="<?php echo $row['StCode'];?>"><?php echo $row['StateName'];?></option>
-                    <?php
-                    }
-                    ?>
+                    <option value="21" selected>Maharashtra</option> <!-- Set Maharashtra as default -->
+                    <?php 
+                    $query = mysqli_query($conn, "SELECT * FROM state");
+                    while ($row = mysqli_fetch_array($query)) { ?>
+                      <option value="<?php echo $row['StCode']; ?>" <?php echo ($row['StCode'] == '21') ? 'selected' : ''; ?>>
+                        <?php echo $row['StateName']; ?>
+                      </option>
+                    <?php } ?>
                   </select>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">District</label>
+                <label for="district" class="col-md-3 col-form-label text-white">District</label>
                 <div class="col-md-9">
                   <select name="district" id="district-list" class="form-control">
-                    <option value=""><?php echo "$para10"?></option>
+                    <option value=""><?php echo $para10; ?></option> <!-- Pre-select the user's current district -->
                   </select>
                 </div>
               </div>
@@ -334,18 +334,20 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
 <!-- Get District Script -->
 <script>
+  function getdistrict(val) {
+    $.ajax({
+      type: "POST",
+      url: "fget_district.php", // Path to the PHP file
+      data: { state_id: val }, // Send the selected state code
+      success: function(data) {
+        $("#district-list").html(data); // Update the district dropdown
+      }
+    });
+  }
+
+  // Trigger district loading for the default state (Maharashtra) on page load
   $(document).ready(function () {
-    function getdistrict(val) {
-      $.ajax({
-        type: "POST",
-        url: "fget_district.php",
-        data: 'state_id=' + val,
-        success: function(data) {
-          $("#district-list").html(data);
-        }
-      });
-    }
-    window.getdistrict = getdistrict; // Expose globally if needed
+    getdistrict(21); // Fetch districts for Maharashtra (state_code = 21)
   });
 </script>
 
