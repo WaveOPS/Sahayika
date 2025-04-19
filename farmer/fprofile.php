@@ -198,48 +198,46 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
     <!-- Edit Profile Modal -->
     <div id="edit" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Edit Profile</h4>
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
+        <div class="modal-content" style="border-radius: 20px; background-color: white;"> <!-- White surrounding box -->
+          <div class="modal-header" style="background-color: white; color: #008000; border-radius: 20px 20px 0 0;"> <!-- White header with green text -->
+            <h4 class="modal-title" style="color: #008000;">Edit Profile</h4> <!-- Green text -->
+            <button type="button" class="close" data-dismiss="modal" style="color: #008000;">&times;</button> <!-- Green close button -->
           </div>
-          <div class="modal-body bg-gradient-danger">
-            <form class="col s12 l5 white-text" method="POST" autocomplete="new-password">
+          <div class="modal-body" style="background-color: white; color: #008000; border-radius: 0 0 20px 20px;"> <!-- White body with green text -->
+            <form class="col s12 l5" method="POST" autocomplete="new-password">
               <div class="form-group row">
-                <label for="name" class="col-md-3 col-form-label text-white">Farmer ID</label>
+                <label for="name" class="col-md-3 col-form-label" style="color: #008000;">Farmer ID</label>
                 <div class="col-md-9">
-                  <input name="id" class="form-control" value="<?php echo "$para1"?>" readonly />
+                  <input name="id" class="form-control" value="<?php echo "$para1" ?>" readonly />
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">Farmer Name</label>
+                <label for="staffid" class="col-md-3 col-form-label" style="color: #008000;">Farmer Name</label>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="name" value="<?php echo "$para2"?>" />
+                  <input class="form-control" type="text" name="name" value="<?php echo "$para2" ?>" />
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">Email Address</label>
+                <label for="staffid" class="col-md-3 col-form-label" style="color: #008000;">Email Address</label>
                 <div class="col-md-9">
-                  <input class="form-control" type="email" name="email" value="<?php echo "$para5"?>" readonly />
+                  <input class="form-control" type="email" name="email" value="<?php echo "$para5" ?>" readonly />
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">Mobile No</label>
+                <label for="staffid" class="col-md-3 col-form-label" style="color: #008000;">Mobile No</label>
                 <div class="col-md-9">
-                  <input class="form-control" type="number" min="0" name="mobile" value="<?php echo "$para6"?>" />
+                  <input class="form-control" type="number" min="0" name="mobile" value="<?php echo "$para6" ?>" />
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="col-md-3 col-form-label text-white" for="email">Gender</label>
+                <label class="col-md-3 col-form-label" style="color: #008000;" for="email">Gender</label>
                 <div class="col-md-9">
                   <select class="col-md-12 font-weight-bold form-control" name="gender">
-                    <option selected hidden><?php echo "$para7"?></option>
+                    <option selected hidden><?php echo "$para7" ?></option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                   </select>
@@ -247,52 +245,50 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               </div>
 
               <div class="form-group row">
-                <label class="col-md-3 col-form-label text-white" for="dob">DOB</label>
+                <label class="col-md-3 col-form-label" style="color: #008000;" for="dob">DOB</label>
                 <div class="col-md-9">
-                  <input class="form-control" name="dob" type="date" value="<?php echo "$para8"?>" />
+                  <input class="form-control" name="dob" type="date" value="<?php echo "$para8" ?>" />
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">State</label>
+                <label for="staffid" class="col-md-3 col-form-label" style="color: #008000;">State</label>
                 <div class="col-md-9">
                   <select onChange="getdistrict(this.value);" name="state" id="state" class="form-control">
-                    <option value=""><?php echo "$para9"?></option>
-                    <?php $query =mysqli_query($conn,"SELECT * FROM state");
-                    while($row=mysqli_fetch_array($query))
-                    { ?>
-                    <option value="<?php echo $row['StCode'];?>"><?php echo $row['StateName'];?></option>
+                    <option value=""><?php echo "$para9" ?></option>
                     <?php
-                    }
-                    ?>
+                    $query = mysqli_query($conn, "SELECT * FROM state");
+                    while ($row = mysqli_fetch_array($query)) { ?>
+                      <option value="<?php echo $row['StCode']; ?>"><?php echo $row['StateName']; ?></option>
+                    <?php } ?>
                   </select>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">District</label>
+                <label for="staffid" class="col-md-3 col-form-label" style="color: #008000;">District</label>
                 <div class="col-md-9">
                   <select name="district" id="district-list" class="form-control">
-                    <option value=""><?php echo "$para10"?></option>
+                    <option value=""><?php echo "$para10" ?></option>
                   </select>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">City</label>
+                <label for="staffid" class="col-md-3 col-form-label" style="color: #008000;">City</label>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="city" value="<?php echo "$para11"?>" />
+                  <input class="form-control" type="text" name="city" value="<?php echo "$para11" ?>" />
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white">Password</label>
+                <label for="staffid" class="col-md-3 col-form-label" style="color: #008000;">Password</label>
                 <div class="col-9">
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
                     </div>
-                    <input name="pass" type="password" value="<?php echo "$para3"?>" class="input form-control" id="password" placeholder="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
+                    <input name="pass" type="password" value="<?php echo "$para3" ?>" class="input form-control" id="password" placeholder="password" required="true" aria-label="password" aria-describedby="basic-addon1" />
                     <div class="input-group-append">
                       <span class="input-group-text" onclick="password_show_hide();">
                         <i class="fas fa-eye" id="show_eye"></i>
@@ -304,9 +300,9 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
               </div>
 
               <div class="form-group row">
-                <label for="staffid" class="col-md-3 col-form-label text-white"></label>
+                <label for="staffid" class="col-md-3 col-form-label"></label>
                 <div class="col-md-9">
-                  <button name="farmerupdate" class="btn-block btn btn-success"><span class="glyphicon glyphicon-edit"></span> Submit</button>
+                  <button name="farmerupdate" class="btn-block btn" style="background-color: #008000; color: white; border: 2px solid #008000;">Submit</button> <!-- Green button with white text -->
                 </div>
               </div>
             </form>
