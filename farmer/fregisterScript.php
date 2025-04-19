@@ -104,7 +104,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirm
     {	
         if (create_user($name, $password, $email, $mobile, $gender, $dob, $statename, $district, $city )) {
 			$_SESSION['farmer_login_user']=$email; // Initializing Session    
-        header("location: ftwostep.php");
+        header("location: fprofile.php");
         }else{	
 		
 			$error = '

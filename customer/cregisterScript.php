@@ -104,7 +104,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
     {	
         if (create_user($name, $password, $email, $mobile, $statename, $city, $address, $pincode )) {
 			$_SESSION['customer_login_user']=$email; // Initializing Session    
-        header("location: ctwostep.php");
+        header("location: cprofile.php");
         }else{
 			
 						$error = '

@@ -58,7 +58,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
             <div class="col-md-12 mb-3">
 
 				<div class="card text-white bg-gradient-white mb-3 login-container">
-				<form role="form" action="#" method="post" >  
+				<form role="form" action="#" method="post">  
 				  <div class="card-header">
 				  <span class="display-4" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Yield Prediction  </span>	
 				  
@@ -86,7 +86,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
                                    <td>
                                     	<div class="form-group">
 										<select  name="state" class="form-control" required>
-											<option value="Karnataka">Karnataka</option>
+											<option value="Karnataka" <?php echo (isset($_POST['state']) && $_POST['state'] == 'Karnataka') ? 'selected' : ''; ?>>Karnataka</option>
 										</select>
 																				
 										</div>
@@ -96,36 +96,36 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 										<div class="form-group ">
 										<select id="district" name="district" class="form-control" required>
 										  <option value="">Select a district</option>
-										  <option value="BAGALKOT">Bagalkot</option>
-										  <option value="BANGALORE_RURAL">Bangalore Rural</option>
-										  <option value="BELGAUM">Belgaum</option>
-										  <option value="BELLARY">Bellary</option>
-										  <option value="BENGALURU_URBAN">Bengaluru Urban</option>
-										  <option value="BIDAR">Bidar</option>
-										  <option value="BIJAPUR">Bijapur</option>
-										  <option value="CHAMARAJANAGAR">Chamarajanagar</option>
-										  <option value="CHIKBALLAPUR">Chikballapur</option>
-										  <option value="CHIKMAGALUR">Chikmagalur</option>
-										  <option value="CHITRADURGA">Chitradurga</option>
-										  <option value="DAKSHIN_KANNAD">Dakshin Kannad</option>
-										  <option value="DAVANGERE">Davangere</option>
-										  <option value="DHARWAD">Dharwad</option>
-										  <option value="GADAG">Gadag</option>
-										  <option value="GULBARGA">Gulbarga</option>
-										  <option value="HAVERI">Haveri</option>
-										  <option value="HASSAN">Hassan</option>
-										  <option value="KODAGU">Kodagu</option>
-										  <option value="KOLAR">Kolar</option>
-										  <option value="KOPPAL">Koppal</option>
-										  <option value="MANDYA">Mandya</option>
-										  <option value="MYSORE">Mysore</option>
-										  <option value="RAMANAGARA">Ramanagara</option>
-										  <option value="RAICHUR">Raichur</option>
-										  <option value="SHIMOGA">Shimoga</option>
-										  <option value="TUMKUR">Tumkur</option>
-										  <option value="UDUPI">Udupi</option>
-										  <option value="UTTAR_KANNAD">Uttar Kannad</option>
-										  <option value="YADGIR">Yadgir</option>
+										  <option value="BAGALKOT" <?php echo (isset($_POST['district']) && $_POST['district'] == 'BAGALKOT') ? 'selected' : ''; ?>>Bagalkot</option>
+										  <option value="BANGALORE_RURAL" <?php echo (isset($_POST['district']) && $_POST['district'] == 'BANGALORE_RURAL') ? 'selected' : ''; ?>>Bangalore Rural</option>
+										  <option value="BELGAUM" <?php echo (isset($_POST['district']) && $_POST['district'] == 'BELGAUM') ? 'selected' : ''; ?>>Belgaum</option>
+										  <option value="BELLARY" <?php echo (isset($_POST['district']) && $_POST['district'] == 'BELLARY') ? 'selected' : ''; ?>>Bellary</option>
+										  <option value="BENGALURU_URBAN" <?php echo (isset($_POST['district']) && $_POST['district'] == 'BENGALURU_URBAN') ? 'selected' : ''; ?>>Bengaluru Urban</option>
+										  <option value="BIDAR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'BIDAR') ? 'selected' : ''; ?>>Bidar</option>
+										  <option value="BIJAPUR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'BIJAPUR') ? 'selected' : ''; ?>>Bijapur</option>
+										  <option value="CHAMARAJANAGAR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'CHAMARAJANAGAR') ? 'selected' : ''; ?>>Chamarajanagar</option>
+										  <option value="CHIKBALLAPUR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'CHIKBALLAPUR') ? 'selected' : ''; ?>>Chikballapur</option>
+										  <option value="CHIKMAGALUR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'CHIKMAGALUR') ? 'selected' : ''; ?>>Chikmagalur</option>
+										  <option value="CHITRADURGA" <?php echo (isset($_POST['district']) && $_POST['district'] == 'CHITRADURGA') ? 'selected' : ''; ?>>Chitradurga</option>
+										  <option value="DAKSHIN_KANNAD" <?php echo (isset($_POST['district']) && $_POST['district'] == 'DAKSHIN_KANNAD') ? 'selected' : ''; ?>>Dakshin Kannad</option>
+										  <option value="DAVANGERE" <?php echo (isset($_POST['district']) && $_POST['district'] == 'DAVANGERE') ? 'selected' : ''; ?>>Davangere</option>
+										  <option value="DHARWAD" <?php echo (isset($_POST['district']) && $_POST['district'] == 'DHARWAD') ? 'selected' : ''; ?>>Dharwad</option>
+										  <option value="GADAG" <?php echo (isset($_POST['district']) && $_POST['district'] == 'GADAG') ? 'selected' : ''; ?>>Gadag</option>
+										  <option value="GULBARGA" <?php echo (isset($_POST['district']) && $_POST['district'] == 'GULBARGA') ? 'selected' : ''; ?>>Gulbarga</option>
+										  <option value="HAVERI" <?php echo (isset($_POST['district']) && $_POST['district'] == 'HAVERI') ? 'selected' : ''; ?>>Haveri</option>
+										  <option value="HASSAN" <?php echo (isset($_POST['district']) && $_POST['district'] == 'HASSAN') ? 'selected' : ''; ?>>Hassan</option>
+										  <option value="KODAGU" <?php echo (isset($_POST['district']) && $_POST['district'] == 'KODAGU') ? 'selected' : ''; ?>>Kodagu</option>
+										  <option value="KOLAR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'KOLAR') ? 'selected' : ''; ?>>Kolar</option>
+										  <option value="KOPPAL" <?php echo (isset($_POST['district']) && $_POST['district'] == 'KOPPAL') ? 'selected' : ''; ?>>Koppal</option>
+										  <option value="MANDYA" <?php echo (isset($_POST['district']) && $_POST['district'] == 'MANDYA') ? 'selected' : ''; ?>>Mandya</option>
+										  <option value="MYSORE" <?php echo (isset($_POST['district']) && $_POST['district'] == 'MYSORE') ? 'selected' : ''; ?>>Mysore</option>
+										  <option value="RAMANAGARA" <?php echo (isset($_POST['district']) && $_POST['district'] == 'RAMANAGARA') ? 'selected' : ''; ?>>Ramanagara</option>
+										  <option value="RAICHUR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'RAICHUR') ? 'selected' : ''; ?>>Raichur</option>
+										  <option value="SHIMOGA" <?php echo (isset($_POST['district']) && $_POST['district'] == 'SHIMOGA') ? 'selected' : ''; ?>>Shimoga</option>
+										  <option value="TUMKUR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'TUMKUR') ? 'selected' : ''; ?>>Tumkur</option>
+										  <option value="UDUPI" <?php echo (isset($_POST['district']) && $_POST['district'] == 'UDUPI') ? 'selected' : ''; ?>>Udupi</option>
+										  <option value="UTTAR_KANNAD" <?php echo (isset($_POST['district']) && $_POST['district'] == 'UTTAR_KANNAD') ? 'selected' : ''; ?>>Uttar Kannad</option>
+										  <option value="YADGIR" <?php echo (isset($_POST['district']) && $_POST['district'] == 'YADGIR') ? 'selected' : ''; ?>>Yadgir</option>
 										</select>
 
 										</div>
@@ -136,10 +136,10 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 									
 													<select name="Season" class="form-control" id="season" required>
 													<option value="">Select Season ...</option>
-													<option name="Kharif" value="Kharif">Kharif</option>
-													<option name="Rabi" value="Rabi">Rabi</option>
-													<option name="Summer" value="Summer">Summer</option>
-													<option name="WholeYear" value="WholeYear">Whole Year</option>
+													<option name="Kharif" value="Kharif" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Kharif') ? 'selected' : ''; ?>>Kharif</option>
+													<option name="Rabi" value="Rabi" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Rabi') ? 'selected' : ''; ?>>Rabi</option>
+													<option name="Summer" value="Summer" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Summer') ? 'selected' : ''; ?>>Summer</option>
+													<option name="WholeYear" value="WholeYear" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'WholeYear') ? 'selected' : ''; ?>>Whole Year</option>
 											
 													</select>
 										</div>
@@ -150,6 +150,9 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
                                     	<div class="form-group" >
 										<select id="crop" class="form-control" name="crops" required>
 									  <option value="">Select crop</option>
+									  <?php if (isset($_POST['crops'])): ?>
+										<option value="<?php echo htmlspecialchars($_POST['crops']); ?>" selected><?php echo htmlspecialchars($_POST['crops']); ?></option>
+									  <?php endif; ?>
 									</select>
 											
 										</div>
@@ -186,7 +189,7 @@ if (selectedDistrict && selectedSeason) {
 </script>  
 									<td>
                                     	<div class="form-group">
-											<input type = "number" step=0.01 name="area" placeholder="Area in Hectares" required class="form-control">
+											<input type = "number" step=0.01 name="area" placeholder="Area in Hectares" required class="form-control" value="<?php echo isset($_POST['area']) ? htmlspecialchars($_POST['area']) : ''; ?>">
 											
 										</div>
                                     </td>

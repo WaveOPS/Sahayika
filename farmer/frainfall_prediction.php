@@ -32,7 +32,6 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
     </div>-->
 	<head>
 		<style>
@@ -85,8 +84,11 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
                                     	<div class="form-group ">
 											    <select id="region-select" name="region" class="form-control" required>
 													<option value="">Select Region</option>
+													<script language="javascript"> print_region("region-select"); </script>
+													<?php if (isset($_POST['region'])): ?>
+														<option value="<?php echo htmlspecialchars($_POST['region']); ?>" selected><?php echo htmlspecialchars($_POST['region']); ?></option>
+													<?php endif; ?>
 												</select>
-												<script language="javascript"> print_region("region-select"); </script>
 										</div>
                                     </td>
 
@@ -94,8 +96,11 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 										<div class="form-group ">
 											    <select id="month-select" name="month" class="form-control" required>
 													<option value="">Select Month</option>
+													<script language="javascript"> print_months("month-select"); </script>
+													<?php if (isset($_POST['month'])): ?>
+														<option value="<?php echo htmlspecialchars($_POST['month']); ?>" selected><?php echo htmlspecialchars($_POST['month']); ?></option>
+													<?php endif; ?>
 												</select>
-												<script language="javascript"> print_months("month-select"); </script>
 										</div>
                                     </td>
 									

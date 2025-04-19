@@ -70,7 +70,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 				  </div>
 
 				  <div class="card-body text-dark">
-				     <form role="form" action="#" method="post" >     
+				     <form role="form" action="#" method="post">     
 					 
 				<table class="table table-striped table-hover table-bordered bg-gradient-white text-center display" id="myTable">
 
@@ -88,41 +88,44 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
                                     <td>
                                     	<div class="form-group">
-											<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
-											<script language="javascript">print_state("sts");</script>
-											
-										</div>
-                                    </td>
-
-									<td>
-										<div class="form-group ">
-											<select id ="state" name="district" class="form-control" required>
-											<option value="">Select District</option>
+											<select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control" required>
+												<option value="">Select State</option>
+												<script language="javascript">print_state("sts");</script>
+												<option value="<?php echo isset($_POST['stt']) ? htmlspecialchars($_POST['stt']) : ''; ?>" selected>
+													<?php echo isset($_POST['stt']) ? htmlspecialchars($_POST['stt']) : ''; ?>
+												</option>
 											</select>
-											<script language="javascript">print_state("sts");</script>
+										</div>
+                                    </td>
+
+									<td>
+										<div class="form-group">
+											<select id="state" name="district" class="form-control" required>
+												<option value="">Select District</option>
+												<option value="<?php echo isset($_POST['district']) ? htmlspecialchars($_POST['district']) : ''; ?>" selected>
+													<?php echo isset($_POST['district']) ? htmlspecialchars($_POST['district']) : ''; ?>
+												</option>
+											</select>
 										</div>
                                     </td>
 									
 									<td>
-										<div class="form-group ">
-									
-													<select name="Season" class="form-control">
-													<option value="">Select Season ...</option>
-													<option name="Kharif" value="Kharif">Kharif</option>
-													<option name="Whole Year" value="Whole Year">Whole Year</option>
-													<option name="Autumn" value="Autumn">Autumn</option>
-													<option name="Rabi" value="Rabi">Rabi</option>
-													<option name="Summer" value="Summer">Summer</option>
-													<option name="Winter" value="Winter">Winter</option>
-												
-													</select>
+										<div class="form-group">
+											<select name="Season" class="form-control">
+												<option value="">Select Season ...</option>
+												<option value="Kharif" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Kharif') ? 'selected' : ''; ?>>Kharif</option>
+												<option value="Whole Year" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Whole Year') ? 'selected' : ''; ?>>Whole Year</option>
+												<option value="Autumn" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Autumn') ? 'selected' : ''; ?>>Autumn</option>
+												<option value="Rabi" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Rabi') ? 'selected' : ''; ?>>Rabi</option>
+												<option value="Summer" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Summer') ? 'selected' : ''; ?>>Summer</option>
+												<option value="Winter" <?php echo (isset($_POST['Season']) && $_POST['Season'] == 'Winter') ? 'selected' : ''; ?>>Winter</option>
+											</select>
 										</div>
-
 									</td>
 
 									<td>
                                     <center>
-										<div class="form-group ">
+										<div class="form-group">
 											<button type="submit" name="Crop_Predict" class="btn btn-success btn-submit" style="background-color: green;">Predict</button>
 										</div>
                                     
