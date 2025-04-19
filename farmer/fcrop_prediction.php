@@ -47,18 +47,19 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
       border-radius: 20px;
       box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
 	  opacity: 0.95;
-    }
+    }`
+
+	
+	.container {
+    margin-top: -20px !important; /* Reduced top margin */
+  }
 			</style>
 	</head>
 <!-- ======================================================================================================================================== -->
 
 <div class="container ">
     
-    	 <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-success badge-pill mb-3">Prediction</span>
-          </div>
-        </div>
+    	
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
