@@ -46,30 +46,32 @@ function getdistrict(val) {
 }
 
 </script>	
+<style>
+  body {
+    background: url('../assets/img/farm-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .login-container {
+    background: rgba(99, 190, 57, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+  }
+
+  .container {
+    margin-top: -5px !important; /* Reduced top margin */
+  }
+</style>
 </head>
 
   <body class="bg-white" id="top">
   <?php include('navbar.php'); ?>
  	
   <section class="section section-shaped section-lg">
-  <style>
-    body {
-      background: url('../assets/img/farm-background.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-   
-    .login-button {
-      background: #4CAF50;
-      color: white;
-      font-weight: bold;
-    }
-    .login-button:hover {
-      background: #45a049;
-    }
-  </style>
     <!-- <div class="shape shape-style-1 shape-primary">
-      <span></span>
       <span></span>
       <span></span>
       <span></span>
@@ -88,7 +90,7 @@ function getdistrict(val) {
       background-repeat: no-repeat;
     }
 	.login-container {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(99, 190, 57, 0.9);
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
@@ -100,17 +102,26 @@ function getdistrict(val) {
 
 <div class="container">
 
- <div class="row">
+ <!-- <div class="row">
           <div class="col-md-8 mx-auto text-center">
             <span class="badge badge-success badge-pill mb-3">Register</span>
           </div>
-        </div> 
+        </div>  -->
       
 <div class="row">
 <div class="col-sm-12 mb-3">  
 			  
   <div class="nav  nav-fill bg-gradient-white " id="nav-tab" role="tablist" style="border-radius: 20px;">
-    <a class="nav-item nav-link active font-weight-bold login-container" style="background-color: rgba(255, 255, 255, 0.92);color:green;font-size:25px;text-decoration:underline;font-family:'Times New Roman', Times, serif;" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Farmer Signup</a>
+    <a class="nav-item nav-link active font-weight-bold login-container" 
+       style="background-color: #008000; color: white; font-size: 25px; text-decoration: underline; font-family: 'Times New Roman', Times, serif; padding: 10px 15px;" 
+       id="nav-home-tab" 
+       data-toggle="tab" 
+       href="#nav-home" 
+       role="tab" 
+       aria-controls="nav-home" 
+       aria-selected="true">
+       Farmer Signup
+    </a>
 
   </div>
                   
