@@ -156,7 +156,13 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
       $command = escapeshellcmd("python ML/crop_prediction/ZDecision_Tree_Model_Call.py $JsonState $JsonDistrict $JsonSeason");
       $output = shell_exec($command); // Use shell_exec instead of passthru for better control
-      echo '<span style="color:white;">' . htmlspecialchars($output) . '</span>';
+
+      // Remove trailing comma and clean up the output
+      $outputArray = explode(',', $output); // Split the output by commas
+      $outputArray = array_filter($outputArray, 'strlen'); // Remove empty elements
+      $cleanOutput = implode(', ', $outputArray); // Rejoin the array into a string
+
+      echo '<span style="color:white;">' . htmlspecialchars($cleanOutput) . '</span>';
     }
     ?>
   </h4>

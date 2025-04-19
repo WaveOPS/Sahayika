@@ -54,11 +54,6 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 <div class="container ">
     
-    	 <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-success badge-pill mb-3">Prediction</span>
-          </div>
-        </div>
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
@@ -126,30 +121,24 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 
 <div class="card text-white mb-3 login-container" style="background-color:green;">
-				  
-					<h4>
-					<?php 
-					
-					
-					if(isset($_POST['Rainfall_Predict'])){
+  <h4>
+    <?php 
+    if (isset($_POST['Rainfall_Predict'])) {
+      $region = trim($_POST['region']);
+      $month = trim($_POST['month']);
 
-					$region=trim($_POST['region']);
-					$month=trim($_POST['month']);
+      echo '<span style="color:white;">Predicted Rainfall for the Region ' . $region . ' in the month ' . $month . ' is (in mm): </span>';
 
-					echo "Predicted Rainfall for the Region $region in the month $month is (in mm) : ";
+      $Jregion = json_encode($region);
+      $Jmonth = json_encode($month);
 
-					$Jregion=json_encode($region);
-					$Jmonth=json_encode($month);
-
-					$command = escapeshellcmd("python ML/rainfall_prediction/rainfall_prediction.py $Jregion $Jmonth ");
-                    $output = passthru($command);
-					echo $output;	
-					
-					}
-
-                    ?>
-					</h4>
-            </div>
+      $command = escapeshellcmd("python ML/rainfall_prediction/rainfall_prediction.py $Jregion $Jmonth");
+      $output = shell_exec($command); // Use shell_exec for better control
+      echo '<span style="color:white;">' . htmlspecialchars($output) . '</span>';
+    }
+    ?>
+  </h4>
+</div>
 				</div>
 	
 	

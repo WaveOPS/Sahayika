@@ -54,12 +54,6 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 <div class="container ">
     
-    	 <div class="row">
-          <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-success badge-pill mb-3">Prediction</span>
-          </div>
-        </div>
-		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
@@ -219,37 +213,30 @@ if (selectedDistrict && selectedSeason) {
 				 
 
 <div class="card text-white mb-3 login-container" style="background-color: green;">
-				  
-					<h4>
-					<?php 
-					
-					
-					if(isset($_POST['Yield_Predict'])){
+  <h4>
+    <?php 
+    if (isset($_POST['Yield_Predict'])) {
+      $state = trim($_POST['state']);
+      $district = trim($_POST['district']);
+      $season = trim($_POST['Season']);
+      $crops = trim($_POST['crops']);
+      $area = trim($_POST['area']);
 
-					$state=trim($_POST['state']);
-					$district=trim($_POST['district']);
-					$season=trim($_POST['Season']);
-					$crops=trim($_POST['crops']);
-					$area=trim($_POST['area']);
+      echo '<span style="color:white;">Predicted crop yield (in Quintal) is:</span>';
 
+      $Jstate = json_encode($state);
+      $Jdistrict = json_encode($district);
+      $Jseason = json_encode($season);
+      $Jcrops = json_encode($crops);
+      $Jarea = json_encode($area);
 
-					echo'<span style="color:white;">Predicted crop yield (in Quintal) is:</span>';
-
-					$Jstate=json_encode($state);
-					$Jdistrict=json_encode($district);
-					$Jseason=json_encode($season);
-					$Jcrops=json_encode($crops);
-					$Jarea=json_encode($area);
-
-					$command = escapeshellcmd("python ML/yield_prediction/yield_prediction.py $Jstate $Jdistrict $Jseason $Jcrops $Jarea ");
-                    $output = passthru($command);
-					echo '<span style="color:white;">'.$output.'</span>';	
-					
-					}
-
-                    ?>
-					</h4>
-            </div>
+      $command = escapeshellcmd("python ML/yield_prediction/yield_prediction.py $Jstate $Jdistrict $Jseason $Jcrops $Jarea");
+      $output = shell_exec($command); // Use shell_exec for better control
+      echo '<span style="color:white;">' . htmlspecialchars($output) . '</span>';
+    }
+    ?>
+  </h4>
+</div>
 				</div>
 	
 	
