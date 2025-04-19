@@ -141,29 +141,26 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 				  <span class="  display-4" style="color: green;" > Result  </span>					
 				  
 <div class="card text-white mb-3 login-container" style="background-color: green;">
-				  
+  <h4>
+    <?php 
+    if (isset($_POST['Crop_Predict'])) {
+      $state = trim($_POST['stt']);
+      $district = trim($_POST['district']);
+      $season = trim($_POST['Season']);
 
-					<h4>
-					<?php 
-					if(isset($_POST['Crop_Predict'])){
-					$state=trim($_POST['stt']);
-					$district=trim($_POST['district']);
-					$season=trim($_POST['Season']);
+      echo '<span style="color:white;">Crops grown in ' . $district . ' during the ' . $season . ' season are :- </span>';
 
+      $JsonState = json_encode($state);
+      $JsonDistrict = json_encode($district);
+      $JsonSeason = json_encode($season);
 
-					echo '<span style="color:white;">Crops grown in '.$district.' during the '.$season.' season are :- </span>';
-
-					$JsonState=json_encode($state);
-					$JsonDistrict=json_encode($district);
-					$JsonSeason=json_encode($season);
-					
-					$command = escapeshellcmd("python ML/crop_prediction/ZDecision_Tree_Model_Call.py $JsonState $JsonDistrict $JsonSeason");
-                    $output = passthru($command);
-					echo '<span style="color:white">'.$output. '</span>';					
-					}
-                    ?>
-					</h4>
-            </div>
+      $command = escapeshellcmd("python ML/crop_prediction/ZDecision_Tree_Model_Call.py $JsonState $JsonDistrict $JsonSeason");
+      $output = shell_exec($command); // Use shell_exec instead of passthru for better control
+      echo '<span style="color:white;">' . htmlspecialchars($output) . '</span>';
+    }
+    ?>
+  </h4>
+</div>
 			</div>
 	
 	
