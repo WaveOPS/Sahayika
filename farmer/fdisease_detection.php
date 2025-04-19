@@ -26,10 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $parts = explode("|", $output);
                     
                     if (count($parts) === 2) {
-                        $className = htmlspecialchars($parts[0]);
-                        $description = htmlspecialchars($parts[1]);
+                        $className = $parts[0];
+                        $description = $parts[1];
 
-                        echo "<h2>Disease Detected: $className</h2>";
                         echo "<p><strong>Info:</strong> $description</p>";
                     } else {
                         echo "<p>Unexpected output format: $output</p>";
