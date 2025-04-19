@@ -46,3 +46,22 @@ predictions = classifier.predict(user_input)
 
 #Print the predicted crop
 print(str(predictions[0]))
+
+
+# from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+# # Make predictions on test set
+# y_pred = classifier.predict(X_test)
+
+# # Accuracy Score
+# accuracy = accuracy_score(y_test, y_pred)
+# print(f"Model Accuracy: {accuracy * 100:.2f}%")
+
+# # Classification Report
+# report = classification_report(y_test, y_pred)
+# print("Classification Report:\n", report)
+
+# # Confusion Matrix (optional, if visualized later)
+# conf_matrix = confusion_matrix(y_test, y_pred)
+# print("Confusion Matrix:\n", conf_matrix)
+
