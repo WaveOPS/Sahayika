@@ -79,6 +79,11 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
   <!-- Profile Content -->
   <div class="container">
+  <div class="row">
+          <div class="col-md-8 mx-auto text-center">
+            <span class="badge badge-pill mb-3" style="background-color: green;color:white;">Profile</span>
+          </div>
+        </div>
 
     <div class="row row-content">
       <!-- Profile Image and Edit Button -->
@@ -102,7 +107,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
           <div class="card-body" style="background-color: #008000; color: white; border-radius: 20px;"> <!-- Added border-radius -->
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">Farmer ID</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">Farmer ID</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para1 ?>
@@ -111,7 +116,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">Farmer Name</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">Farmer Name</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para2 ?>
@@ -120,7 +125,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">Email Address</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">Email Address</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para5 ?>
@@ -129,7 +134,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">Mobile No</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">Mobile No</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para6 ?>
@@ -138,7 +143,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">Gender</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">Gender</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para7 ?>
@@ -147,7 +152,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">DOB</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">DOB</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para8 ?>
@@ -156,7 +161,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">State</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">State</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para9 ?>
@@ -165,7 +170,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">District</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">District</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para10 ?>
@@ -174,7 +179,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">City</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">City</h6>
               </div>
               <div class="col-sm-9">
                 <?php echo $para11 ?>
@@ -183,7 +188,7 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 
             <div class="row mb-1">
               <div class="col-sm-3">
-                <h6 class="mb-0 font-weight-bold">Password</h6>
+                <h6 class="mb-0 font-weight-bold" style="color:black;">Password</h6>
               </div>
               <div class="col-sm-9">
                 ********

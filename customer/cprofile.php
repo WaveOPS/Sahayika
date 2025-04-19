@@ -93,12 +93,12 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 			
 			
 				<div class="card" style="border-radius: 20px;">
-                <div class="card-body bg-gradient-warning login-container">
+                <div class="card-body bg-gradient-white login-container">
                   <div class="d-flex flex-column align-items-center text-center ">
                     <img src="../assets/img/customers.png" alt="student" class="rounded-circle img-fluid" width="202px">
                     <div class="mt-3">
                       <h4>                Welcome     <?php echo $login_session ?></h4>
-                      		  <button data-toggle="modal" data-target="#edit" class="btn btn-danger">Edit Profile</button>
+                      		  <button data-toggle="modal" data-target="#edit" class="btn" style="background-color: green;color:white;">Edit Profile</button>
 
 
                     </div>
@@ -110,13 +110,13 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 			
                 <div class="col-md-8">
               <div class="card mb-3 " style="border-radius: 20px;">
-                <div class="card-body bg-gradient-success login-container">
+                <div class="card-body login-container" style="background-color: green;">
 				
-                  <div class="row mb-1">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">Customer ID</h6>
+                  <div class="row mb-1" >
+                    <div class="col-sm-3" >
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">Customer ID</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para1 ?>
                     </div>
                   </div>
@@ -125,9 +125,9 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 				  
                   <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">Customer Name</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">Customer Name</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para2 ?>
                     </div>
                   </div>
@@ -135,9 +135,9 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 				  
                   <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">Email Address</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">Email Address</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para5 ?>
                     </div>
                   </div>
@@ -145,9 +145,9 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 				   
 				    <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">Mobile No</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">Mobile No</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para6 ?>
                     </div>
                   </div>
@@ -155,36 +155,36 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 				   
 				       <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">State</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">State</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para7 ?>
                     </div>
                   </div>
 			  
 				       <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">City</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">City</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para8 ?>
                     </div>
                   </div>
 				  
 				     <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">Address</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">Address</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para9 ?>
                     </div>
                   </div>
 				  
 				     <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">Pincode</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">Pincode</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       <?php echo $para10 ?>
                     </div>
                   </div>
@@ -192,9 +192,9 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
 				  
 				     <div class="row mb-1">
                     <div class="col-sm-3">
-                      <h6 class="mb-0 font-weight-bold">Password</h6>
+                      <h6 class="mb-0 font-weight-bold" style="color:black;">Password</h6>
                     </div>
-                    <div class="col-sm-9 text-dark">
+                    <div class="col-sm-9 text-white">
                       ******** 
                     </div>
                   </div>
