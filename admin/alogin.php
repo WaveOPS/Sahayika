@@ -47,6 +47,9 @@ include('aloginScript.php'); // Includes Login Script
       background-repeat: no-repeat;
       font-family: 'Open Sans', sans-serif;
     }
+    .container {
+    margin-top: 10px !important; /* Reduced top margin */
+  }
 
     main {
       flex: 1;
@@ -90,6 +93,8 @@ include('aloginScript.php'); // Includes Login Script
     .btn-login:hover {
       background:rgb(38, 182, 81);
     }
+    
+
   </style>
 
 </head>
@@ -138,7 +143,7 @@ include('aloginScript.php'); // Includes Login Script
         </div>
         <button type="submit" class="btn btn-login" name="adminlogin">Login</button>
         <div class="text-center mt-2">
-          <a href="#" class="text-info">Forgot Password?</a>
+          <a href="#" class="text-success">Forgot Password?</a>
         </div>
         <span><?php echo $error; ?></span>
       </form>
