@@ -25,7 +25,7 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
 <?php require ('anav.php');  ?>
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+  <!--  <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -36,7 +36,23 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div>-->
+	<head>
+		<style>
+			 body {
+      background: url('../assets/img/farm-bg18.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+	.login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.9);
+	  opacity: 0.95;
+    }
+			</style>
+	</head>
 <!-- ======================================================================================================================================== -->
 
 
@@ -45,16 +61,16 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-danger badge-pill mb-3">Contact</span>
+            <span class="badge badge-success badge-pill mb-3">Contact</span>
           </div>
         </div>
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
-				<div class="card text-white bg-gradient-info mb-3">
+				<div class="card text-white bg-gradient-white mb-3 login-container">
 				  <div class="card-header">
-				  <span class=" text-primary display-4" > Contact Queries  </span>
+				  <span class="display-3" style="color:limegreen;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;"> Contact Queries  </span>
 				  
 					
 				  </div>
@@ -92,7 +108,7 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
 							 <td> <?php echo $res['c_email'];  ?> </td>
 							 <td> <?php echo $res['c_address'];  ?> </td>
 							 <td> <?php echo $res['c_message'];  ?> </td>
-						<td > <button class="btn btn-sm btn-danger" > <a href="amsgdelete.php?id=<?php echo $res['c_id']; ?>"  class=" nav-link text-white">Delete</a> </button> </td>
+						<td > <button class="btn btn-sm" style="background-color:limegreen;color:white;"> <a href="amsgdelete.php?id=<?php echo $res['c_id']; ?>"  class=" nav-link text-white">Delete</a> </button> </td>
 
 </tr>
 
