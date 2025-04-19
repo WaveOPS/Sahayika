@@ -98,6 +98,7 @@
       <ul class="dropdown-menu">
         <li><a href="fcrop_recommendation.php">Crop Recommendation</a></li>
         <li><a href="ffertilizer_recommendation.php">Fertilizer Recommendation</a></li>
+        <li><a href="fdisease_detection.php">Disease Detection</a></li>
       </ul>
     </li>
     <li class="dropdown">
