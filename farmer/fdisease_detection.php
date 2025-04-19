@@ -50,6 +50,15 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
     opacity: 0.95;
   }
  </style>
+ <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Popper.js (needed for Bootstrap tooltips/popovers) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 </head>
 <head>
     <meta charset="UTF-8">
@@ -83,7 +92,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
     </thead>
     <tbody>
         <tr class="text-center">
-        <th><input type="file" name="image" accept="image/*" required stye="padding:10px 25px;" ></th>
+        <th><input type="file" name="image" accept="image/*" required style="padding:10px 25px;" ></th>
         <th><input type="submit" value="Upload and Detect" style="background-color: green;color:white;font-size: 15px; padding: 10px 25px; border-radius: 10px; border: none; cursor: pointer;"></th>
         </tr>
     </tbody>
@@ -129,9 +138,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $className = $parts[0];
                         $description = $parts[1];
 
-                        echo "<p style='color: green; font-weight: bold; font-size: 18px; font-family: Arial, sans-serif; text-align: center;'><strong>Info:</strong> $description</p>";
+                        echo "<p style='color: white; font-weight: bold; font-size: 18px; font-family: Arial, sans-serif; text-align: center;'><strong>Info:</strong> $description</p>";
                     } else {
-                        echo "<pstyle='color:white; font-weight: bold; font-size: 20px; font-family:'Times New Roman', Times, serif;'>Unexpected output format: $output</p>";
+                        echo "<p style='color:white; font-weight: bold; font-size: 20px; font-family:'Times New Roman', Times, serif;'>Unexpected output format: $output</p>";
                     }
                 } else {
                     echo "<p style='color:white; font-weight: bold; font-size: 20px; font-family:'Times New Roman', Times, serif;'>Something went wrong with prediction.</p>";
