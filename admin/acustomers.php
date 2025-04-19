@@ -26,7 +26,7 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
 <?php require ('anav.php');  ?>
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+   <!-- <div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -37,7 +37,23 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div>-->
+	<head>
+		<style>
+			 body {
+      background: url('../assets/img/farm-bg16.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+	.login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.9);
+	  opacity: 0.95;
+    }
+			</style>
+	</head>
 <!-- ======================================================================================================================================== -->
 
 
@@ -45,16 +61,16 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-danger badge-pill mb-3">CUSTOMER</span>
+            <span class="badge badge-pill mb-3" style="background-color:deepskyblue;color:white;">CUSTOMER</span>
           </div>
         </div>
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
-				<div class="card text-white bg-gradient-secondary mb-3">
+				<div class="card text-white bg-gradient-secondary mb-3 login-container">
 				  <div class="card-header">
-				  <span class=" text-default display-4" > Customers List  </span>
+				  <span class="display-3" style="color:dodgerblue;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Customers List  </span>
 				  
 					
 				  </div>
@@ -94,7 +110,7 @@ $sql = "SELECT cust_name, cust_id, email, phone_no, state, city, address, pincod
 							 <td> <?php echo $res['address'];  ?> </td>
 							  <td> <?php echo $res['pincode'];  ?> </td>
 							  
-							<td > <button class="btn btn-sm btn-danger" > <a href="acdelete.php?id=<?php echo $res['cust_id']; ?>"  class=" nav-link text-white">Delete</a> </button> </td>
+							<td > <button class="btn btn-sm" style="background-color: dodgerblue;color:white;" > <a href="acdelete.php?id=<?php echo $res['cust_id']; ?>"  class=" nav-link text-white">Delete</a> </button> </td>
 
 
 							</tr>

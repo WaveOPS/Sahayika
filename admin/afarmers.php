@@ -26,7 +26,7 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
 <?php require ('anav.php');  ?>
  	
   <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 shape-primary">
+   <!--<div class="shape shape-style-1 shape-primary">
       <span></span>
       <span></span>
       <span></span>
@@ -37,7 +37,23 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div>-->
+	<head>
+		<style>
+			 body {
+      background: url('../assets/img/farm-bg15.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+	.login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.9);
+	  opacity: 0.95;
+    }
+			</style>
+	</head>
 <!-- ======================================================================================================================================== -->
 
 
@@ -45,16 +61,16 @@ $query4 = "SELECT * from admin where admin_name ='$user'";
     
     	 <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <span class="badge badge-danger badge-pill mb-3">Famers</span>
+            <span class="badge badge-success badge-pill mb-3">Farmers</span>
           </div>
         </div>
 		
           <div class="row row-content">
             <div class="col-md-12 mb-3">
 
-				<div class="card text-white bg-gradient-success mb-3">
+				<div class="card text-white bg-gradient-white mb-3 login-container">
 				  <div class="card-header">
-				  <span class=" text-success display-4" > Farmers List  </span>
+				  <span class="display-3" style="color:green;font-family:'Times New Roman', Times, serif;font-weight:bold;text-decoration:underline;" > Farmers List  </span>
 					
 				  </div>
 
@@ -96,7 +112,7 @@ $sql = "SELECT farmer_name, farmer_id, F_gender, email, phone_no, F_birthday, F_
 							 <td> <?php echo $res['F_District'];  ?> </td>
 							 <td> <?php echo $res['F_Location'];  ?> </td>
 							 	
-							<td > <button class="btn btn-sm btn-danger" > <a href="afdelete.php?id=<?php echo $res['farmer_id']; ?>"  class=" nav-link text-white">Delete</a> </button> </td>
+							<td > <button class="btn btn-sm btn-success"style="background-color: green;color:white" > <a href="afdelete.php?id=<?php echo $res['farmer_id']; ?>"  class=" nav-link text-white">Delete</a> </button> </td>
 							</tr>
 
 							 <?php 
