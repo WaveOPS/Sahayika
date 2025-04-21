@@ -20,7 +20,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
   
  <script>
   window.addEventListener("load", function() {
-    const endpoint = "https://newsapi.org/v2/everything?q=farmers&sortBy=popularity&apiKey=2c8e7f312803422c9f6b0ceff3a25750";
+    const endpoint = "https://newsapi.org/v2/everything?q=farmers&language=en&sortBy=popularity&domains=indiatoday.in,ndtv.com,thehindu.com,timesofindia.indiatimes.com&apiKey=2c8e7f312803422c9f6b0ceff3a25750";
     fetch(endpoint)
     .then(response => {
       if (!response.ok) {
@@ -110,7 +110,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 
 	       // https://newsapi.org/v2/everything?q=Agriculture&sortBy=popularity&apiKey=e13c1810209a4e6ca7997d39b797152c
 	
-        $url="https://newsapi.org/v2/everything?q=farmers&sortBy=popularity&apiKey=2c8e7f312803422c9f6b0ceff3a25750";   //Your API KEY
+        $url="https://newsapi.org/v2/everything?q=farmers&language=en&sortBy=popularity&domains=indiatoday.in,ndtv.com,thehindu.com,timesofindia.indiatimes.com&apiKey=2c8e7f312803422c9f6b0ceff3a25750";   //Your API KEY
 		
         $response=file_get_contents($url);
         $newsdata= json_decode($response);

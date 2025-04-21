@@ -20,7 +20,7 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
   
  <script>
   window.addEventListener("load", function() {
-    const endpoint = "https://newsapi.org/v2/everything?q=farmers&sortBy=popularity&apiKey=2c8e7f312803422c9f6b0ceff3a25750";
+    const endpoint = "https://newsapi.org/v2/everything?q=farmers&sortBy=popularity&apiKey=b2e6f022b43d4b6081eb52d4a8657f02";
     fetch(endpoint)
     .then(response => {
       if (!response.ok) {
@@ -93,8 +93,8 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
 	error_reporting(E_ERROR | E_PARSE);
 
 	       // https://newsapi.org/v2/everything?q=Agriculture&sortBy=popularity&apiKey=e13c1810209a4e6ca7997d39b797152c
-	
-        $url="https://newsapi.org/v2/everything?q=farmers&sortBy=popularity&apiKey=2c8e7f312803422c9f6b0ceff3a25750";   //Your API KEY
+	// 2c8e7f312803422c9f6b0ceff3a25750
+        $url="https://newsapi.org/v2/everything?q=farmers&sortBy=popularity&apiKey=b2e6f022b43d4b6081eb52d4a8657f02";   //Your API KEY
 		
         $response=file_get_contents($url);
         $newsdata= json_decode($response);
