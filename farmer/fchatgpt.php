@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="row">
       <div class="col-md-8 mx-auto">
         <div class="chat-container">
-          <h2 class="text-center" style="color: #008000;">Gemini Chat 🧠</h2>
+          <h2 class="text-center" style="color: #008000;">Sahayikya Your personal farming assistant 👧</h2>
           <div id="chat" style="border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: auto; background-color: #f9f9f9; border-radius: 8px; margin-bottom: 15px;"></div>
           <div>
             <input type="text" id="userInput" placeholder="Type a message..." size="50" class="form-control mb-2">
