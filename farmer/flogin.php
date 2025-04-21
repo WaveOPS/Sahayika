@@ -173,7 +173,12 @@ include('floginScript.php'); // Includes Login Script
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-
+  <!-- Include the language-translate.js -->
+  <script src="../assets/js/language-translate.js"></script>
+  <script>
+    // Initialize the language selector and apply the saved language
+    initializeLanguageSelector();
+  </script>
 </body>
 
 

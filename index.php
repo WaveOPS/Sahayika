@@ -95,169 +95,190 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-  <body class="bg-white" id="top" onload="myFunction()">
+<body class="bg-white" id="top" onload="myFunction()">
 
-    <!-- Navbar -->
-    <nav
-      id="navbar-main"
-      class="
-        navbar navbar-main navbar-expand-lg
-        navbar-light
-        position-sticky
-        top-0
-        shadow
-        py-2
-      "
-    >
-      <div class="container">
-        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-          <li class="nav-item dropdown">
-            <a href="index.php" class="navbar-brand mr-lg-5 text-white">
-            <img src="assets/img/sahayika.png" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2);" />
-            </a>
-          </li>
-        </ul>
+  <!-- Floating Language Selector Dropdown -->
+  <div
+    id="languageDropdown"
+    class="form-group"
+    style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"
+  >
+    <select id="languageSelector" class="form-control">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="ta">Tamil</option>
+      <option value="te">Telugu</option>
+      <option value="kn">Kannada</option>
+      <option value="ml">Malayalam</option>
+      <option value="mr">Marathi</option>
+      <option value="gu">Gujarati</option>
+      <option value="bn">Bengali</option>
+      <option value="pa">Punjabi</option>
+      <option value="ur">Urdu</option>
+    </select>
+  </div>
 
-        <button
-          class="navbar-toggler bg-white"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar_global"
-          aria-controls="navbar_global"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon text-white"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbar_global">
-          <div class="navbar-collapse-header">
-            <div class="row">
-              <div class="col-10 collapse-brand">
-                <a href="index.php">
-                  <img src="assets/img/sahayika.png" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2);" />
-                </a>
-              </div>
-              <div class="col-2 collapse-close bg-danger">
-                <button
-                  type="button"
-                  class="navbar-toggler"
-                  data-toggle="collapse"
-                  data-target="#navbar_global"
-                  aria-controls="navbar_global"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span></span>
-                  <span></span>
-                </button>
-              </div>
+  <!-- Navbar -->
+  <nav
+    id="navbar-main"
+    class="
+      navbar navbar-main navbar-expand-lg
+      navbar-light
+      position-sticky
+      top-0
+      shadow
+      py-2
+    "
+  >
+    <div class="container">
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a href="index.php" class="navbar-brand mr-lg-5 text-white">
+          <img src="assets/img/sahayika.png" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2);" />
+          </a>
+        </li>
+      </ul>
+
+      <button
+        class="navbar-toggler bg-white"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar_global"
+        aria-controls="navbar_global"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-10 collapse-brand">
+              <a href="index.php">
+                <img src="assets/img/sahayika.png" style="filter: brightness(0.8) sepia(1) hue-rotate(90deg) saturate(2);" />
+              </a>
+            </div>
+            <div class="col-2 collapse-close bg-danger">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbar_global"
+                aria-controls="navbar_global"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span></span>
+                <span></span>
+              </button>
             </div>
           </div>
+        </div>
 
-          <ul class="navbar-nav align-items-lg-center ml-auto">
-            <li class="nav-item">
-              <a href="contact.php" class="nav-link">
+        <ul class="navbar-nav align-items-lg-center ml-auto">
+          <li class="nav-item">
+            <a href="contact.php" class="nav-link">
+              <span class="text-white nav-link-inner--text">
+                <i class="text-white fas fa-address-card"></i> Contact
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown show">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 <span class="text-white nav-link-inner--text">
-                  <i class="text-white fas fa-address-card"></i> Contact
+                  <i class="text-white fas fa-user-plus"></i> Sign Up
                 </span>
               </a>
-            </li>
-            <li class="nav-item">
-              <div class="dropdown show">
-                <a
-                  class="nav-link dropdown-toggle text-white"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="text-white nav-link-inner--text">
-                    <i class="text-white fas fa-user-plus"></i> Sign Up
-                  </span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="farmer/fregister.php">Farmer</a>
-                  <a class="dropdown-item" href="customer/cregister.php">Customer</a>
-                </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="farmer/fregister.php">Farmer</a>
+                <a class="dropdown-item" href="customer/cregister.php">Customer</a>
               </div>
-            </li>
-            <li class="nav-item">
-              <div class="dropdown show">
-                <a
-                  class="nav-link dropdown-toggle text-white"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="text-white nav-link-inner--text">
-                    <i class="text-white fas fa-sign-in-alt"></i> Login
-                  </span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="farmer/flogin.php">Farmer</a>
-                  <a class="dropdown-item" href="customer/clogin.php">Customer</a>
-                  <a class="dropdown-item" href="admin/alogin.php">Admin</a>
-                </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown show">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span class="text-white nav-link-inner--text">
+                  <i class="text-white fas fa-sign-in-alt"></i> Login
+                </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="farmer/flogin.php">Farmer</a>
+                <a class="dropdown-item" href="customer/clogin.php">Customer</a>
+                <a class="dropdown-item" href="admin/alogin.php">Admin</a>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <!-- End Navbar -->
-
-    <!-- Hero Section with Sliding Background Images -->
-    <header>
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="jumbotron bg-cover text-white" 
-                     style="background-image: url('assets/img/farm-bg.png'); height: 100vh; background-size: cover; background-position: center;">
-                    <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Welcome to SAHAYIKA</h1>
-                        <p class="lead">Empowering Farmers, Connecting Communities</p>
-                        <a href="#features" class="btn btn-success btn-lg mt-3">Explore Features</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="jumbotron bg-cover text-white" 
-                     style="background-image: url('assets/img/farm-bg2.jpg'); height: 100vh; background-size: cover; background-position: center;">
-                    <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Innovating Agriculture</h1>
-                        <a href="#about" class="btn btn-success btn-lg mt-3">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="jumbotron bg-cover text-white" 
-                     style="background-image: url('assets/img/farm-bg5.jpg'); height: 100vh; background-size: cover; background-position: center;">
-                    <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-                        <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Connecting Farmers and Customers</h1>
-                        <p class="lead">Direct Selling Without Middlemen</p>
-                        <a href="contact.php" class="btn btn-warning btn-lg mt-3">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Carousel Controls -->
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Hero Section with Sliding Background Images -->
+  <header>
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
+      <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+              <div class="jumbotron bg-cover text-white" 
+                   style="background-image: url('assets/img/farm-bg.png'); height: 100vh; background-size: cover; background-position: center;">
+                  <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                      <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Welcome to SAHAYIKA</h1>
+                      <p class="lead">Empowering Farmers, Connecting Communities</p>
+                      <a href="#features" class="btn btn-success btn-lg mt-3">Explore Features</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+              <div class="jumbotron bg-cover text-white" 
+                   style="background-image: url('assets/img/farm-bg2.jpg'); height: 100vh; background-size: cover; background-position: center;">
+                  <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                      <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Innovating Agriculture</h1>
+                      <a href="#about" class="btn btn-success btn-lg mt-3">Learn More</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+              <div class="jumbotron bg-cover text-white" 
+                   style="background-image: url('assets/img/farm-bg5.jpg'); height: 100vh; background-size: cover; background-position: center;">
+                  <div class="container text-center d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                      <h1 class="display-3 font-weight-bold" style="color:rgb(255, 255, 255);">Connecting Farmers and Customers</h1>
+                      <p class="lead">Direct Selling Without Middlemen</p>
+                      <a href="contact.php" class="btn btn-warning btn-lg mt-3">Contact</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Carousel Controls -->
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
 </header>
 
 <div class="wrapper" >
@@ -373,6 +394,80 @@
 </footer>
 
 <script>
+  // Define the missing myFunction
+  function myFunction() {
+    // Apply the saved language on page load
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+    if (savedLanguage) {
+      document.getElementById("languageSelector").value = savedLanguage;
+      applyLanguage(savedLanguage);
+    }
+  }
 
-const apiKey = "sk-xxxxxxxxxxxxxxxxxxx";   // Enter your apikey here
-const chatbox = document.getElementById("quote");
+  const apiKey = "AIzaSyBLmIEUfOqnh_at6JRUvt64pQjgV1_i7dc"; // Replace with your Google Cloud API key
+
+  document.getElementById("languageSelector").addEventListener("change", function () {
+    const targetLanguage = this.value;
+    localStorage.setItem("selectedLanguage", targetLanguage); // Save the selected language
+    applyLanguage(targetLanguage);
+  });
+
+  function applyLanguage(targetLanguage) {
+    const elementsToTranslate = document.querySelectorAll("body *:not(script):not(style)");
+
+    elementsToTranslate.forEach((element) => {
+      if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
+        // Only translate text nodes to avoid disturbing the UI
+        const originalText = element.innerText.trim();
+        if (originalText !== "") {
+          fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              q: originalText,
+              target: targetLanguage,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.data && data.data.translations && data.data.translations[0]) {
+                element.innerText = data.data.translations[0].translatedText;
+              }
+            })
+            .catch((error) => console.error("Error translating text:", error));
+        }
+      }
+    });
+    // Explicitly translate navbar elements
+  const navbarElements = document.querySelectorAll("#navbar-main .nav-link, #navbar-main .dropdown-item");
+  navbarElements.forEach((element) => {
+    const originalText = element.innerText.trim();
+    if (originalText !== "") {
+      fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          q: originalText,
+          target: targetLanguage,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.data && data.data.translations && data.data.translations[0]) {
+            element.innerText = data.data.translations[0].translatedText;
+          }
+        })
+        .catch((error) => console.error("Error translating navbar text:", error));
+    }
+  });
+  }
+</script>
+
+<!-- Include the language-translate.js -->
+<script src="assets/js/language-translate.js"></script>
+<script>
+  // Initialize the language selector
+  initializeLanguageSelector();
+</script>
+</body>
+</html>

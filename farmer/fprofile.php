@@ -370,5 +370,13 @@ $query5 = "SELECT StateName from state where StCode ='$state'";
   });
 </script>
 
+ <!-- Include the language-translate.js -->
+ <script src="../assets/js/language-translate.js"></script>
+  <script>
+    // Initialize the language selector and apply the saved language
+    initializeLanguageSelector();
+  </script>
+</body>
+
 </body>
 </html>

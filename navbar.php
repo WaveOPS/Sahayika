@@ -82,3 +82,9 @@
      </div>
    </div>
  </nav>
+ <!-- Include the language-translate.js -->
+<script src="assets/js/language-translate.js"></script>
+<script>
+  // Initialize the language selector
+  initializeLanguageSelector();
+</script>

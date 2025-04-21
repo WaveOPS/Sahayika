@@ -1,15 +1,8 @@
 <!-- filepath: c:\xampp\htdocs\Sahayika\navbar.php -->
 <nav
    id="navbar-main"
-   class="
-     navbar navbar-main navbar-expand-lg
-     navbar-light
-     position-sticky
-     top-0
-     shadow
-     py-2
-   "
-   style="background: #000;" <!-- Black background -->
+   class="navbar navbar-main navbar-expand-lg navbar-light position-sticky top-0 shadow py-2"
+   style="background: #000;"
  >
    <div class="container">
      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
@@ -82,3 +75,7 @@
      </div>
    </div>
  </nav>
+ <script src="../assets/js/language-translate.js"></script>
+ <script>
+   initializeLanguageSelector();
+ </script>
