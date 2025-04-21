@@ -252,5 +252,11 @@ if (selectedDistrict && selectedSeason) {
     <?php require("footer.php");?>
 
 </body>
+ <!-- Include the language-translate.js -->
+ <script src="../assets/js/language-translate.js"></script>
+  <script>
+    // Initialize the language selector and apply the saved language
+    initializeLanguageSelector();
+  </script>
 </html>
 

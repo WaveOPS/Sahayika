@@ -95,7 +95,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<body class="bg-white" id="top" onload="myFunction()">
+<body class="bg-white" id="top">
 
   <!-- Floating Language Selector Dropdown -->
   <div
@@ -121,14 +121,8 @@
   <!-- Navbar -->
   <nav
     id="navbar-main"
-    class="
-      navbar navbar-main navbar-expand-lg
-      navbar-light
-      position-sticky
-      top-0
-      shadow
-      py-2
-    "
+    class="navbar navbar-main navbar-expand-lg navbar-light position-sticky top-0 shadow py-2"
+    style="background: #000;" <!-- Ensure navbar background is black -->
   >
     <div class="container">
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
@@ -177,7 +171,7 @@
 
         <ul class="navbar-nav align-items-lg-center ml-auto">
           <li class="nav-item">
-            <a href="contact.php" class="nav-link">
+            <a href="contact.php" class="nav-link text-white">
               <span class="text-white nav-link-inner--text">
                 <i class="text-white fas fa-address-card"></i> Contact
               </span>
@@ -392,76 +386,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-  // Define the missing myFunction
-  function myFunction() {
-    // Apply the saved language on page load
-    const savedLanguage = localStorage.getItem("selectedLanguage");
-    if (savedLanguage) {
-      document.getElementById("languageSelector").value = savedLanguage;
-      applyLanguage(savedLanguage);
-    }
-  }
-
-  const apiKey = "AIzaSyBLmIEUfOqnh_at6JRUvt64pQjgV1_i7dc"; // Replace with your Google Cloud API key
-
-  document.getElementById("languageSelector").addEventListener("change", function () {
-    const targetLanguage = this.value;
-    localStorage.setItem("selectedLanguage", targetLanguage); // Save the selected language
-    applyLanguage(targetLanguage);
-  });
-
-  function applyLanguage(targetLanguage) {
-    const elementsToTranslate = document.querySelectorAll("body *:not(script):not(style)");
-
-    elementsToTranslate.forEach((element) => {
-      if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
-        // Only translate text nodes to avoid disturbing the UI
-        const originalText = element.innerText.trim();
-        if (originalText !== "") {
-          fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              q: originalText,
-              target: targetLanguage,
-            }),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              if (data.data && data.data.translations && data.data.translations[0]) {
-                element.innerText = data.data.translations[0].translatedText;
-              }
-            })
-            .catch((error) => console.error("Error translating text:", error));
-        }
-      }
-    });
-    // Explicitly translate navbar elements
-  const navbarElements = document.querySelectorAll("#navbar-main .nav-link, #navbar-main .dropdown-item");
-  navbarElements.forEach((element) => {
-    const originalText = element.innerText.trim();
-    if (originalText !== "") {
-      fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          q: originalText,
-          target: targetLanguage,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.data && data.data.translations && data.data.translations[0]) {
-            element.innerText = data.data.translations[0].translatedText;
-          }
-        })
-        .catch((error) => console.error("Error translating navbar text:", error));
-    }
-  });
-  }
-</script>
 
 <!-- Include the language-translate.js -->
 <script src="assets/js/language-translate.js"></script>

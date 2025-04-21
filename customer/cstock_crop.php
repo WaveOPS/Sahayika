@@ -128,6 +128,11 @@ $query4 = "SELECT * from custlogin where email='$user_check'";
 } );
 </script>
 </body>
-
+ <!-- Include the language-translate.js -->
+ <script src="../assets/js/language-translate.js"></script>
+  <script>
+    // Initialize the language selector and apply the saved language
+    initializeLanguageSelector();
+  </script>
 </html>
 

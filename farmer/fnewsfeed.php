@@ -150,5 +150,11 @@ $query4 = "SELECT * from farmerlogin where email='$user_check'";
     $('#myTable').DataTable();
 } );
 </script>
+ <!-- Include the language-translate.js -->
+ <script src="../assets/js/language-translate.js"></script>
+  <script>
+    // Initialize the language selector and apply the saved language
+    initializeLanguageSelector();
+  </script>
 </body>
 </html>

@@ -137,4 +137,10 @@ $sql = "SELECT cust_name, cust_id, email, phone_no, state, city, address, pincod
 </script>
 
 </body>
+ <!-- Include the language-translate.js -->
+ <script src="../assets/js/language-translate.js"></script>
+  <script>
+    // Initialize the language selector and apply the saved language
+    initializeLanguageSelector();
+  </script>
 </html>

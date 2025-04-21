@@ -136,5 +136,11 @@ $sql = "SELECT farmer_name, farmer_id, F_gender, email, phone_no, F_birthday, F_
 </script>
 
 </body>
+ <!-- Include the language-translate.js -->
+ <script src="../assets/js/language-translate.js"></script>
+  <script>
+    // Initialize the language selector and apply the saved language
+    initializeLanguageSelector();
+  </script>
 </html>
 
