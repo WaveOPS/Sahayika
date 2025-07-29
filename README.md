@@ -166,5 +166,3 @@ The Crop Management System dataset includes the following features:
 - Rainfall Prediction: Input `Subdivision` and `Year` to get rainfall prediction for that year.
 - Yield Prediction: Input `State_Name`, `District_Name`, `Crop_Year`, `Season`, `Crop`, `Area`, `Production` to get predicted yields for that crop and location.
 
-## License
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
