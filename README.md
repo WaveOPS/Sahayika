@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="[https://example.com/sahayika_logo.png](https://github.com/WaveOPS/Sahayika/blob/main/assets/img/sahayika.png)" alt="Sahayika Logo" width="200"/> 
+  <img src="[https://github.com/WaveOPS/Sahayika/blob/main/assets/img/sahayika.png]" alt="Sahayika Logo" width="200"/> 
   <h1>Sahayika - Smart Agriculture System</h1>
   <p>Empowering Farmers with AI-Driven Insights for Sustainable Agriculture</p>
 </div>
