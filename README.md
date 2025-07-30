@@ -111,7 +111,7 @@ Here's how to get Sahayika up and running:
 
 ## Contributors
 
-* Om Rajendra Moholkar
-* Shital Vijay Prajapati
-* Raghavendra Rama Kunder
-* Pawan Rajesh Jamkhande
+- [Shital Prajapati](https://github.com/Shital2005)
+- [Om Moholkar](https://github.com/OmMoholkar)
+- [Pawan Jamkhande](https://github.com/PawanJamkhande)
+- [Raghavendra Rama Kunder](https://github.com/RaghavendraKunder)
